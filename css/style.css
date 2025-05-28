@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/**-------------------- GENERAL --------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+ 
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/*!-------------------- HEADER --------------------*/
+
+header{
+  background-color:white;
+}
+/*.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  color:rgb(29, 14, 107);;
+}*/
+
+/*.header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+  padding: 0;
+}*/
+
+/*.header nav ul li {
+  margin: 0 20px;
+}*/
+
+.nav-link{
+  color:rgb(17, 17, 118) !important;
+}
+.boton{
+  border-radius: 2px solid white;
+  color:rgb(22, 22, 99);
+  background-color: rgba(128, 128, 128, 0.441);
+
+  
+}
+.boton:hover{
+  background-color:rgba(128, 128, 128, 0.489);
+}
+
+.carousel-inner div img{
+  width: 70%;
+  height: 500px;
+  padding: 20px;
+  
+  background-color:rgba(128, 128, 128, 0.566);
+  
+}
+/*.nav-principal a {
+  text-decoration: none;
+  color:rgb(29, 14, 107);
+  font-size: 15px;
+}*/
+
+.logoo {
+  height: 120px;
+}
+
+.navbar-brand img{
+  height: 90px;
+  margin: 10px;
+  
+}
+
+/*?-------------------- INICIO --------------------*/
+.titulo-principal-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(12, 12, 114, 0.768);
+  padding: 5px;
+  margin: 10px;
+  /*background-color: rgba(128, 128, 128, 0.298);*/
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.fondo-titulo-inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(20, 11, 98, 0.077);
+  padding: 5px;
+  margin: 5px;
+}
+
+.principal-index {
+  text-align: center;
+  height: 90vh;
+  background-image: url(../img/Negocio.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.producto-destacado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background-color: rgba(128, 128, 128, 0.566);
+}
+
+.tarjeta-producto {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  flex-wrap:wrap;
+}
+
+.tarjeta-producto:hover {
+  transform: scale(1.05);
+}
+
+.productos-inicio img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.productos-inicio p {
+  font-weight: 300;
+}
+
+.redes {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.redes-sociales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.iconos-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.iconos-redes img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.fixed img {
+  width: 60px;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+}
+
+/**-------------------- SOBRE NOSOTROS --------------------*/
+.fondo-titulo-sobre-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(20, 11, 98);
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+}
+
+.fondo-titulo-sobre-nosotros h1 {
+  font-size: 30px;
+  color: rgb(29, 14, 107);;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.titulo-principal-nosotros {
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.contenido-sobre-nosotros p {
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+  background-color: #f1f1f1;
+}
+
+.boton-contacto {
+  display: inline-block;
+  background-color: rgba(128, 128, 128, 0.238);
+  color: rgb(16, 28, 93);
+  padding: 18px 40px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-contacto:hover {
+  background-color: rgb(83, 13, 13);
+}
+
+.boton-centro {
+  text-align: center;
+}
+
+.titulo-sobre-nosotros {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(33, 20, 106);
+  margin: 0;
+  padding: 30px;
+}
+
+/**-------------------- CONTACTO --------------------*/
+.tirulo-contacto p {
+  background-color: rgba(128, 128, 128, 0.239);
+  font-size: 30px;
+  text-align: center;
+  color: rgb(29, 14, 107);;
+  padding: 20px;
+  margin: 0;
+}
+
+.contactos-principl img {
+  height: 29.7vh;
+}
+
+/*?-------------------- PRODUCTO --------------------*/
+.fondo-titulo-producto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(20, 11, 98);
+  padding: 5px;
+  margin: 5px;
+}
+
+.parrafo {
+  background-color: rgba(0, 0, 0, 0.175);
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(29, 14, 107);;
+}
+
+.tarjeta-producto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-producto {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  text-align: center;
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.producto p {
+  font-weight: 300;
+}
+
+/**-------------------- MARCAS --------------------*/
+.fondo-titulo-marcas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(20, 11, 98);
+  font-size: 30px;
+  margin: 0;
+}
+
+.contenido-de-las-marcas {
+  text-align: center;
+  font-size: 25px;
+  color: rgb(29, 14, 107);;
+  border-radius: 20px;
+  margin: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.titulo-marcas {
+  background-color: gray;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 30px;
+  height: 10vh;
+}
+
+.titulo-marcas p {
+  font-size: 30px;
+  color: rgb(29, 14, 107);;
+}
+
+.imagenes-marcas {
+  height: 80px;
+}
+
+div img {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.imgenes-marcas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*!-------------------- FOOTER --------------------*/
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 16px;
+  padding: 0px 0;
+  margin-top: 30px;
+  background-color: rgba(128, 128, 128, 0.566);;
+}
+
+.footer-contacto {
+  padding: 30px;
+  background-color: rgba(128, 128, 128, 0.441);
+  text-align: center;
+  font-size: 16px;
+  margin-top: 0px;
+  border-top: 1px solid #ccc;
+}
+
+.contenido-footer-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  background-color: rgba(128, 128, 128, 0.566);;
+}
+
+.mapa-contacto {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 150px;
+  border: 0;
+}
+
+.producto-producto {
+  background-color: rgba(128, 128, 128, 0.441);
+  text-align: center;
+  padding: 40px;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+footer i{
+ color: rgba(12, 12, 104, 0.824);
+ font-size:50px ;
+}
+
+footer i:hover{
+  color:brown;
+}
+
+
+/**-------------------- GRID SOBRE NOSOTROS --------------------*/
+.grid-galeria {
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 215px;
+  border: 4px solid brown;
+  padding: 20px;
+  margin: 5px;
+  gap: 10px;
+}
+
+.img-1, .img-3 {
+  grid-row: span 2;
+}
+
+.grid-galeria div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*?---------------------GRID MARCA-----------------------------*/
+.grid-galeria-marcas {
+  display: grid;
+  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 100px;
+  border: 5px solid brown;
+  padding: 10px;
+  margin: 10px;
+  gap: 5px;
+}
+
+.grid-galeria-marcas div img{
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+}
+
+/*! -------------------- MEDIA QUERY-------------------- */
+
+/* MacBook Pro 13'' (1280px) */
+@media screen and (max-width: 1280px) {
+  .nav-principal a { font-size: 20px; }
+  .logoo { height: 110px; }
+  .tarjeta-producto, .producto { width: 230px; }
+  .titulo-principal-main, .titulo-sobre-nosotros, .titulo-marcas { font-size: 28px; }
+  .parrafo { font-size: 28px; }
+  .iconos-redes img { width: 50px; height: 50px; }
+}
+
+/* Tablets (768px) */
+@media screen and (max-width: 768px) {
+  /*.header { flex-direction: column;}*/
+
+  .logoo{height: 110px;}
+
+  .nav-principal a { font-size: 20px; }
+
+  .producto, .tarjeta-producto { width: 100%; max-width: 300px; }
+}
+
+/* Celulares grandes (480px) */
+@media screen and (max-width: 480px) {
+  .nav-principal a { font-size: 20px; flex-direction:column ; }
+  .logoo { height: 90px; }
+  .titulo-principal-main, .titulo-sobre-nosotros { font-size: 24px; }
+}
+
+/* Celulares pequeños (350px) */
+@media screen and (max-width: 350px) {
+  .nav-principal a { font-size: 20px; flex-direction: column;
+  }
+  .titulo-principal-main, .titulo-sobre-nosotros { font-size: 20px; }
+
+}
+
+@media screen and (max-width:350px){
+  .grid-galeria{
+   grid-template-columns: repeat(1, 1fr);
+   grid-auto-rows: 220px;
+  }
+  .grid-item{
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
