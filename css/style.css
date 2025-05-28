@@ -449,8 +449,8 @@ footer {
 .mapa-contacto {
   border-radius: 8px;
   overflow: hidden;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background-color: transparent;
 }
 .mapa-contacto iframe{
