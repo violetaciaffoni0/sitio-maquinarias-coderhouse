@@ -252,7 +252,6 @@ header{
 
 .boton-contacto:hover {
   background-color: rgba(83, 13, 13, 0.688);
-  font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -387,7 +386,7 @@ footer {
   font-size: 16px;
   padding: 0px 0;
   margin-top: 30px;
-  background-color: rgba(128, 128, 128, 0.566);;
+  background-color: rgba(128, 128, 128, 0.238);
 }
 
 .footer-contacto {
