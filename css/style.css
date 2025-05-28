@@ -330,7 +330,7 @@ background-color: rgba(128, 128, 128, 0);
 }
 
 .tarjeta-producto {
-  background-color:rgba(128, 128, 128, 0.238);
+  background-color:rgba(128, 128, 128, 0);
   border-radius: 8px;
   /*box-shadow: 0 4px 8px rgba(128, 128, 128, 0.52);*/
   width: 250px;
