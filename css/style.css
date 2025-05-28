@@ -32,7 +32,6 @@ header{
   background-color:white;
 }
 
-
 .nav-link{
   color:rgb(17, 17, 118) !important;
 }
@@ -55,11 +54,7 @@ header{
   background-color:rgba(128, 128, 128, 0.566);
   
 }
-/*.nav-principal a {
-  text-decoration: none;
-  color:rgb(29, 14, 107);
-  font-size: 15px;
-}*/
+
 
 .logoo {
   height: 120px;
@@ -353,7 +348,7 @@ padding-bottom: 0;
   color: rgba(12, 12, 114, 0.768);
   padding: 0;
   margin: 0;
-  /*background-color: rgba(128, 128, 128, 0.298);*/
+
   font-size: 30px;
   font-weight: 200;
   text-align: center;
@@ -436,6 +431,7 @@ footer {
   color: rgba(0, 0, 0, 0.776);
   font-size: 15px;
 }
+
 
 
 
