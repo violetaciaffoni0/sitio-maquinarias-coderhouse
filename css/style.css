@@ -297,6 +297,10 @@ header{
   text-align: center;
 }
 
+.productos-pagina-productos{
+  background-color: black;
+}
+
 .parrafo {
   display: flex;
   justify-content: center;
