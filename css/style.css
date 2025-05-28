@@ -546,15 +546,7 @@ footer i:hover{
   .logoo{height: 110px;}
 
   .nav-principal a { font-size: 20px; }
-  .grid-galeria-marcas{
-   grid-template-columns: repeat(1, 1fr);
-   grid-auto-rows: 220px;
-  }
-  .grid-item-marcas{
-grid-column: span 1;
-    grid-row: span 1;
-  }
-
+  
   .producto, .tarjeta-producto { width: 100%; max-width: 300px; }
 }
 
