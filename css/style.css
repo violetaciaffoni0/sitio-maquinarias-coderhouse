@@ -288,6 +288,10 @@ header{
 .contactos-principl img {
   height: 29.7vh;
 }
+.iconos-redes{
+  color: rgba(12, 12, 104, 0.824);
+ font-size:50px ;
+}
 
 /*?-------------------- PRODUCTO --------------------*/
 .fondo-titulo-producto {
