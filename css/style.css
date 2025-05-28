@@ -490,7 +490,7 @@ footer i:hover{
   grid-template-rows: repeat(2, 200px);
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 50px;
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   gap: 1px;
 
