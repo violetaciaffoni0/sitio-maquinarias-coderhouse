@@ -320,6 +320,7 @@ header{
   gap: 50px;
   padding: 40px;
   flex-wrap: wrap;
+  color: black;
 }
 
 .productos-pagina-productos{
