@@ -551,6 +551,9 @@ footer i:hover{
 
   .grid-galeria-marcas{grid-template-columns: repeat(1, 1fr);
    grid-auto-rows: 220px;}
+   
+  .grid-galeria{grid-template-columns: repeat(1, 1fr);
+   grid-auto-rows: 220px;}
 }
 
 /* Celulares grandes (480px) */
