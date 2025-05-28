@@ -322,6 +322,11 @@ header{
   flex-wrap: wrap;
 }
 
+.productos-pagina-productos div img{
+background-color: bisque;
+
+}
+
 .tarjeta-producto {
   background-color:  rgba(128, 128, 128, 0.098);
   border-radius: 8px;
