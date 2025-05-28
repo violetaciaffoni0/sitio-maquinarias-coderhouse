@@ -288,11 +288,11 @@ header{
 .contactos-principl img {
   height: 29.7vh;
 }
-.iconos-redes{
+.iconos-redes i{
   color: rgb(9, 9, 91);
  font-size:50px ;
 }
-.iconos-redes:hover{
+.iconos-redes i:hover{
   color: brown;
 }
 
