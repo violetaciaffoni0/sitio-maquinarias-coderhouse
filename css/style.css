@@ -298,12 +298,17 @@ header{
 }
 
 .parrafo {
-  background-color: rgba(0, 0, 0, 0.175);
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(12, 12, 114, 0.768);
+  padding: 5px;
+  margin: 10px;
+  /*background-color: rgba(128, 128, 128, 0.298);*/
+  border-radius: 10px;
   font-size: 30px;
-  color: rgb(29, 14, 107);;
+  font-weight: 200;
+  text-align: center;
 }
 
 .tarjeta-producto{
