@@ -446,6 +446,14 @@ footer {
 
 }
 
+.redes-footer-contacto h3{
+  font-family: 'Courier New', Courier, monospace;
+  color: rgba(0, 0, 0, 0.368);
+}
+
+
+
+
 .mapa-contacto {
   border-radius: 8px;
   overflow: hidden;
