@@ -134,7 +134,7 @@ header{
 }
 
 .tarjeta-producto {
-  background-color: white;
+  background-color: rgb(92, 19, 19);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 250px;
