@@ -197,7 +197,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(20, 11, 98);
+  /*color: rgb(20, 11, 98);*/
   padding: 0;
   margin: 0;
   font-size: 30px;
