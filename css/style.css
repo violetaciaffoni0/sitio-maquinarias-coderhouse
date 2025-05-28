@@ -271,12 +271,17 @@ header{
 
 /**-------------------- CONTACTO --------------------*/
 .tirulo-contacto p {
-  background-color: rgba(128, 128, 128, 0.239);
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(12, 12, 114, 0.768);
+  padding: 5px;
+  margin: 10px;
+  /*background-color: rgba(128, 128, 128, 0.298);*/
+  border-radius: 10px;
   font-size: 30px;
+  font-weight: 200;
   text-align: center;
-  color: rgb(29, 14, 107);;
-  padding: 20px;
-  margin: 0;
 }
 
 .contactos-principl img {
