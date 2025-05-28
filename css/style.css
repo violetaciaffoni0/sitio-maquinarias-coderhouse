@@ -2,6 +2,7 @@
 
 /**-------------------- GENERAL --------------------*/
 body {
+  background-color: rgba(128, 128, 128, 0.071);
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
@@ -328,10 +329,11 @@ background-color: rgba(128, 128, 128, 0);
 }
 
 .tarjeta-producto {
-  background-color:  rgba(128, 128, 128, 0.098);
+  background-color:white;
   border-radius: 8px;
   /*box-shadow: 0 4px 8px rgba(128, 128, 128, 0.52);*/
   width: 250px;
+
   text-align: center;
 }
 
