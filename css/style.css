@@ -98,11 +98,11 @@ header{
   color: rgba(12, 12, 114, 0.768);
   padding: 5px;
   margin: 10px;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   font-size: 30px;
   font-weight: 200;
   text-align: center;
-  
+
 }
 
 .fondo-titulo-inicio {
