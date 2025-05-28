@@ -440,6 +440,7 @@ footer i:hover{
   padding: 20px;
   margin: 5px;
   gap: 10px;
+  background-color: rgba(128, 128, 128, 0.441);
 }
 
 .img-1, .img-3 {
