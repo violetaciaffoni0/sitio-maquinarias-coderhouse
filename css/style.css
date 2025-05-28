@@ -251,6 +251,8 @@ header{
 
 .boton-contacto:hover {
   background-color: rgba(83, 13, 13, 0.688);
+  font-family: 'Times New Roman', Times, serif;
+
 }
 
 .boton-centro {
