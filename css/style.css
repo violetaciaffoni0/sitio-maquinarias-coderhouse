@@ -228,10 +228,11 @@ header{
 }
 
 .contenido-sobre-nosotros p {
+  font-family: 'Times New Roman', Times, serif;
   padding: 5px;
   margin: 0px;
   font-size: 20px;
-  background-color: rgba(128, 128, 128, 0.441);
+  
 }
 
 .boton-contacto {
