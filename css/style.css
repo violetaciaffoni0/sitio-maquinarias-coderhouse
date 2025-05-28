@@ -430,7 +430,6 @@ footer {
 }
 
 .footer-contacto {
-  padding: 30px;
   background-color: rgba(128, 128, 128, 0.441);
   text-align: center;
   font-size: 16px;
@@ -445,14 +444,13 @@ footer {
   gap: 40px;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  background-color: rgba(128, 128, 128, 0.566);;
+  background-color: transparent;
 }
 
 .mapa-contacto {
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  height: 150px;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 .producto-producto {
