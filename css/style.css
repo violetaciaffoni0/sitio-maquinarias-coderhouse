@@ -2,24 +2,26 @@
 
 /**-------------------- GENERAL --------------------*/
 body {
-  background-color: rgba(128, 128, 128, 0.071);
+  background-color: white;
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
- 
+
 }
 
 
-*{
+* {
   margin: 0;
   padding: 0;
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 main {
@@ -28,31 +30,35 @@ main {
 
 /*!-------------------- HEADER --------------------*/
 
-header{
-  background-color:white;
+header {
+  background-color: white;
+  height: 12vh;
+
 }
 
-.nav-link{
-  color:rgb(17, 17, 118) !important;
+.nav-link {
+  color: rgb(17, 17, 118) !important;
 }
-.boton{
+
+.boton {
   border-radius: 2px solid white;
-  color:rgb(22, 22, 99);
+  color: rgb(22, 22, 99);
   background-color: rgba(128, 128, 128, 0.441);
 
-  
-}
-.boton:hover{
-  background-color:rgba(128, 128, 128, 0.489);
+
 }
 
-.carousel-inner div img{
+.boton:hover {
+  background-color: rgba(128, 128, 128, 0.489);
+}
+
+.carousel-inner div img {
   width: 70%;
   height: 500px;
   padding: 20px;
-  
-  background-color:rgba(128, 128, 128, 0.566);
-  
+
+  background-color: white;
+
 }
 
 
@@ -60,10 +66,11 @@ header{
   height: 120px;
 }
 
-.navbar-brand img{
-  height: 90px;
+.navbar-brand img {
+  height: 70px;
+  width: 200px;
   margin: 10px;
-  
+
 }
 
 /*?-------------------- INICIO --------------------*/
@@ -92,13 +99,38 @@ header{
 }
 
 .principal-index {
+  display: flex;
   text-align: center;
-  height: 90vh;
-  background-image: url(../img/Negocio.jpeg);
+  align-items: center;
+  color: white;
+  height: 100vh;
+  justify-content: flex-start;
+  padding-left: 60px;
+  background-image: url(../img/index\ foto\ 1.jpeg);
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+}
+
+.contenido-principal-index h1 {
+  color: white;
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  font-size: 70px;
+
+}
+
+.boton-principal-index {
+  display: inline-block;
+  background-color: rgba(128, 128, 128, 0.543);
+  color: black;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .producto-destacado {
@@ -108,18 +140,18 @@ header{
   align-items: center;
   gap: 30px;
   padding: 30px;
-  background-color: rgba(128, 128, 128, 0.566);
+  background-color: white;
 }
 
 .tarjeta-producto {
-  
+
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 250px;
   padding: 10px;
   text-align: center;
   transition: transform 0.2s;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 .tarjeta-producto:hover {
@@ -171,66 +203,80 @@ header{
 }
 
 /**-------------------- SOBRE NOSOTROS --------------------*/
+
 .fondo-titulo-sobre-nosotros {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(20, 11, 98);
   padding: 0;
   margin: 0;
-  font-size: 30px;
 }
 
 .fondo-titulo-sobre-nosotros h1 {
-   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgba(12, 12, 114, 0.768);
-  padding: 5px;
-  margin: 10px;
-  /*background-color: rgba(128, 128, 128, 0.298);*/
-  border-radius: 10px;
-  font-size: 30px;
-  font-weight: 200;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-weight: 250;
+  color: rgba(33, 20, 106, 0.931);
+  margin: 20px 0;
   text-align: center;
-
 }
 
 .titulo-principal-nosotros {
-  font-size: 30px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  margin: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  color: rgb(33, 20, 106);
+  background-color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  margin: 5px auto;
   border-radius: 10px;
+  text-align: center;
 }
 
 .contenido-sobre-nosotros p {
-  font-family: 'Times New Roman', Times, serif;
-  padding: 5px;
-  margin: 0px;
-  font-size: 20px;
-  color:rgba(0, 0, 0, 0.654)
-  
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  background-color: rgba(128, 128, 128, 0);
+  padding: 10px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.foto-negocio-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0;
+  margin: 0;
+  background-color: rgba(128, 128, 128, 0);
+}
+
+.foto-negocio-nosotros img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .boton-contacto {
   display: inline-block;
-  background-color: rgba(128, 128, 128, 0.238);
-  color: rgb(16, 28, 93);
-  padding: 18px 40px;
-  border-radius: 7px;
+  background-color: rgba(128, 128, 128, 0.673);
+  color: white;
+  padding: 15px 35px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 20px;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 30px;
   margin-bottom: 60px;
   transition: background-color 0.3s ease;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 .boton-contacto:hover {
-  background-color: rgba(83, 13, 13, 0.688);
-
+  background-color: rgb(19, 19, 136);
 }
 
 .boton-centro {
@@ -246,98 +292,159 @@ header{
   padding: 30px;
 }
 
+
 /**-------------------- CONTACTO --------------------*/
 .tirulo-contacto p {
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: rgba(12, 12, 114, 0.768);
   padding: 5px;
   margin: 10px;
-
-  /*background-color: rgba(128, 128, 128, 0.298);*/
-
+  background-color: white;
   font-size: 30px;
   font-weight: 200;
   text-align: center;
 }
 
-.contactos-principl img {
-  height: 29.7vh;
+/*Título de contacto */
+.titulo-contacto {
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
 }
-.iconos-redes i{
+
+.titulo-contacto p {
+  color: #0c0c72;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+/* Íconos de redes sociales */
+.iconos-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.iconos-redes i {
   color: gray;
- font-size:50px ;
+  font-size: 50px;
+  transition: color 0.3s ease;
 }
-.iconos-redes i:hover{
+
+.iconos-redes i:hover {
   color: brown;
 }
 
+/* Imagen o mapa al final (si aplica) */
+.contactos-principl img {
+  height: auto;
+  max-width: 100%;
+  background-color: white;
+}
+
+
+
+
 /*?-------------------- PRODUCTO --------------------*/
+
+/* Fondo blanco general para toda la sección de productos */
+.productos-pagina-productos {
+  background-color: white;
+  padding-bottom: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.productos-pagina-productos h2 {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-weight: 250;
+  color: rgba(33, 20, 106, 0.931);
+  margin: 20px 0;
+}
+
+/* Título de sección */
 .fondo-titulo-producto {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(12, 12, 114, 0.768);
+  color: #081756;
   background-color: white;
-  padding: 0px;
-  margin: 0px;
-  /*background-color: rgba(128, 128, 128, 0.298);*/
-  border-radius: 10px;
-  font-size: 30px;
-  font-weight: 200;
+  padding: 20px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
-
-
+/* Párrafo descriptivo */
 .parrafo {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(12, 12, 114, 0.768);
-  padding: 5px;
-  margin: 10px;
-  /*background-color: rgba(128, 128, 128, 0.298);*/
+  color: #0a1a57;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 20px auto;
   border-radius: 10px;
-  font-size: 30px;
-  font-weight: 200;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
+  max-width: 1200px;
 }
 
-.tarjeta-producto{
+/* Contenedor de productos */
+.contenedor-productos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
-  padding: 40px;
-  flex-wrap: wrap;
-  background-color: white;
+  gap: 40px;
+  padding: 30px 20px;
 }
 
-.productos-pagina-productos{
-background-color: rgba(128, 128, 128, 0);
-margin-bottom: 0;
-padding-bottom: 0;
-}
-
+/* Tarjetas individuales */
 .tarjeta-producto {
-  background-color: rgba(128, 128, 128, 0.238);
-  border-radius: 8px;
-  /*box-shadow: 0 4px 8px rgba(128, 128, 128, 0.52);*/
-  width: 250px;
-
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 240px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
+  overflow: hidden;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
 .tarjeta-producto img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  display: block;
+  border-bottom: 1px solid #eee;
 }
 
-.producto p {
-  font-weight: 300;
+.tarjeta-producto p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  padding: 15px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 /**-------------------- MARCAS --------------------*/
@@ -348,50 +455,9 @@ padding-bottom: 0;
   color: rgba(12, 12, 114, 0.768);
   padding: 0;
   margin: 0;
-
-  font-size: 30px;
-  font-weight: 200;
-  text-align: center;
-
-}
-
-.contenido-de-las-marcas {
-  text-align: center;
+  background-color: white;
   font-size: 25px;
-  color: rgb(29, 14, 107);;
-  margin: 0;
-  padding: 0;
-  background-color: white;
-}
-
-.titulo-marcas {
-  background-color: white;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  font-size: 30px;
-  height: 10vh;
-}
-
-.titulo-marcas p {
-  font-size: 30px;
-  color: rgb(29, 14, 107);;
-}
-
-.imagenes-marcas {
-  height: 80px;
-}
-
-div img {
-  width: 150px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.imgenes-marcas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-weight: 200;
   text-align: center;
 }
 
@@ -402,14 +468,16 @@ footer {
   font-size: 16px;
   padding: 0px 0;
   margin-top: 30px;
-  background-color: rgba(128, 128, 128, 0.238);
+  background-color: white;
 }
-.producto-footer{
-  background-color: rgba(128, 128, 128, 0);;
+
+.producto-footer {
+  background-color: white;
+  ;
 }
 
 .footer-contacto {
-  background-color: rgba(128, 128, 128, 0.441);
+  background-color: white;
   padding: 20px 0;
   margin-top: 0;
 }
@@ -423,18 +491,13 @@ footer {
   gap: 30px;
   flex-wrap: wrap;
   text-align: center;
-
 }
 
-.redes-footer-contacto h3{
+.redes-footer-contacto h3 {
   font-family: 'Raleway', sans-serif;
-  color: rgba(0, 0, 0, 0.776);
+  color: white;
   font-size: 15px;
 }
-
-
-
-
 
 .mapa-contacto {
   border-radius: 8px;
@@ -443,121 +506,154 @@ footer {
   height: 130px;
   background-color: transparent;
 }
-.mapa-contacto iframe{
+
+.mapa-contacto iframe {
   width: 100%;
   height: 100;
   border: 0;
 }
 
 .producto-producto {
-  background-color: rgba(128, 128, 128, 0.441);
+  background-color: white;
   text-align: center;
   padding: 40px;
   margin-top: 20px;
   border-top: 1px solid #ccc;
 }
 
-footer i{
- color: rgba(12, 12, 104, 0.824);
- font-size:50px ;
+footer i {
+  color: rgba(12, 12, 104, 0.824);
+  font-size: 50px;
 }
 
-footer i:hover{
-  color:brown;
+footer i:hover {
+  color: brown;
 }
-
-
-/**-------------------- GRID SOBRE NOSOTROS --------------------*/
-.grid-galeria {
-  display: grid;
-  grid-template-rows: repeat(3, 200px);
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 215px;
-  padding: 20px;
-  margin: 5px;
-  gap: 10px;
-  background-color: rgba(128, 128, 128, 0.441);
-}
-
-.img-1, .img-3 {
-  grid-row: span 2;
-}
-
-.grid-galeria div img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /*?---------------------GRID MARCA-----------------------------*/
+
 .grid-galeria-marcas {
   display: grid;
-  grid-template-rows: repeat(2, 200px);
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 100px;
-  padding: 10px;
-  margin: 0px;
-  gap: 0px;
-  background-color: rgba(128, 128, 128, 0.441);
-
+  grid-template-rows: repeat(2, 200px);
+  gap: 5px;
+  padding: 2px;
+  background-color: rgba(128, 128, 128, 0.15);
 }
 
-.grid-galeria-marcas div img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.grid-galeria-marcas div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+}
+
+.grid-galeria-marcas div img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /*! -------------------- MEDIA QUERY-------------------- */
 
 /* MacBook Pro 13'' (1280px) */
 @media screen and (max-width: 1280px) {
-  .nav-principal a { font-size: 20px; }
-  .logoo { height: 110px; }
-  .tarjeta-producto, .producto { width: 230px; }
-  .titulo-principal-main, .titulo-sobre-nosotros, .titulo-marcas { font-size: 28px; }
-  .parrafo { font-size: 28px; }
-  .iconos-redes img { width: 50px; height: 50px; }
+  .nav-principal a {
+    font-size: 20px;
+  }
+
+  .logoo {
+    height: 110px;
+  }
+
+  .tarjeta-producto,
+  .producto {
+    width: 230px;
+  }
+
+  .titulo-principal-main,
+  .titulo-sobre-nosotros,
+  .titulo-marcas {
+    font-size: 28px;
+  }
+
+  .parrafo {
+    font-size: 28px;
+  }
+
+  .iconos-redes img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* Tablets (768px) */
 @media screen and (max-width: 768px) {
   /*.header { flex-direction: column;}*/
 
-  .logoo{height: 110px;}
+  .logoo {
+    height: 110px;
+  }
 
-  .nav-principal a { font-size: 20px; }
+  .nav-principal a {
+    font-size: 20px;
+  }
 
-  .producto, .tarjeta-producto { width: 100%; max-width: 300px; }
+  .producto,
+  .tarjeta-producto {
+    width: 100%;
+    max-width: 300px;
+  }
 
-  .grid-galeria-marcas{grid-template-columns: repeat(1, 1fr);
-   grid-auto-rows: 220px;}
-   
-  .grid-galeria{grid-template-columns: repeat(1, 1fr);
-   grid-auto-rows: 220px;}
+  .grid-galeria-marcas {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
+  }
+
+  .grid-galeria {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
+  }
 }
 
 /* Celulares grandes (480px) */
 @media screen and (max-width: 480px) {
-  .nav-principal a { font-size: 20px; flex-direction:column ; }
-  .logoo { height: 90px; }
-  .titulo-principal-main, .titulo-sobre-nosotros { font-size: 24px; }
+  .nav-principal a {
+    font-size: 20px;
+    flex-direction: column;
+  }
+
+  .logoo {
+    height: 90px;
+  }
+
+  .titulo-principal-main,
+  .titulo-sobre-nosotros {
+    font-size: 24px;
+  }
 }
 
 /* Celulares pequeños (350px) */
 @media screen and (max-width: 350px) {
-  .nav-principal a { font-size: 20px; flex-direction: column;
+  .nav-principal a {
+    font-size: 20px;
+    flex-direction: column;
   }
-  .titulo-principal-main, .titulo-sobre-nosotros { font-size: 20px; }
+
+  .titulo-principal-main,
+  .titulo-sobre-nosotros {
+    font-size: 20px;
+  }
 
 }
 
-@media screen and (max-width:350px){
-  .grid-galeria{
-   grid-template-columns: repeat(1, 1fr);
-   grid-auto-rows: 220px;
+@media screen and (max-width:350px) {
+  .grid-galeria {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
   }
-  .grid-item{
+
+  .grid-item {
     grid-column: span 1;
     grid-row: span 1;
   }
