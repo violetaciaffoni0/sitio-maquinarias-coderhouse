@@ -1,0 +1,205 @@
+// _variables.scss
+$color-principal: rgb(17, 17, 118);
+$color-secundario: rgb(22, 22, 99);
+$color-titulo: rgba(33, 20, 106, 0.931);
+$color-fondo: white;
+$color-hover-boton: rgba(128, 128, 128, 0.489);
+$color-boton: rgba(128, 128, 128, 0.441);
+$color-texto: #0a1a57;
+$color-parrafo: #333;
+
+$font-principal: 'Raleway', sans-serif;
+$font-secundaria: 'Open Sans', sans-serif;
+
+// _mixins.scss
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// _extensiones.scss
+%parrafo-grande {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-fondo;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: $font-principal;
+  text-align: center;
+  max-width: 1200px;
+}
+
+// producto.scss
+@import 'variables';
+@import 'mixins';
+@import 'extensiones';
+@import 'header';
+@import 'carousel';
+@import 'logo';
+@import 'productos';
+@import 'footer';
+@import 'fixed';
+
+
+//_Header.scss
+header {
+  background-color: $color-fondo;
+  height: 12vh;
+
+  .navbar-brand {
+    img {
+      height: 70px;
+      width: 200px;
+      margin: 10px;
+    }
+  }
+
+  .nav-link {
+    color: $color-principal !important;
+  }
+
+  .boton {
+    border: 2px solid $color-fondo;
+    border-radius: 2px;
+    color: $color-secundario;
+    background-color: $color-boton;
+
+    &:hover {
+      background-color: $color-hover-boton;
+    }
+  }
+}
+
+/* Carrusel */
+.carousel-inner {
+  div {
+    img {
+      width: 70%;
+      height: 500px;
+      padding: 20px;
+      background-color: $color-fondo;
+    }
+  }
+}
+
+/* Imagen del logo (fuera del navbar) */
+.logoo {
+  height: 120px;
+}
+
+/* Main productos */
+.productos-pagina-productos {
+  background-color: $color-fondo;
+  padding-bottom: 60px;
+  width: 100%;
+  text-align: center;
+
+  h2 {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-family: $font-principal;
+    font-size: 25px;
+    font-weight: 250;
+    color: $color-titulo;
+    margin: 20px 0;
+  }
+}
+
+.parrafo {
+  @extend %parrafo-grande;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-texto;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  max-width: 1200px;
+}
+
+.producto-destacado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .tarjeta-producto {
+    background-color: $color-fondo;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 240px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      color: #333;
+      padding: 15px;
+      font-family: $font-secundaria;
+      margin: 0;
+    }
+  }
+}
+
+/* Footer */
+.producto-footer {
+  .redes {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .redes-sociales {
+    @include flex-center;
+    flex-direction: column;
+    margin: 30px 0;
+  }
+
+  .iconos-redes {
+    @include flex-center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
+/* Imagen fija */
+.fixed {
+  img {
+    width: 60px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+  }
+}

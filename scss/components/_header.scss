@@ -1,0 +1,43 @@
+/*_header.scss*/
+
+header {
+    background-color: white;
+    height: 12vh;
+
+    .navbar-brand {
+        img {
+            height: 70px;
+            width: 200px;
+            margin: 10px;
+        }
+    }
+
+    .nav-link {
+        color: rgb(17, 17, 118) !important;
+    }
+
+    .boton {
+    border: 2px solid white;
+    border-radius: 2px;
+    color: rgb(22, 22, 99);
+    background-color: rgba(128, 128, 128, 0.441);
+
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.489);
+    }
+}
+
+}
+
+.carousel-inner 
+div
+ img {
+    width: 70%;
+    height: 500px;
+    padding: 20px;
+    background-color: white;
+}
+
+.logoo {
+    height: 120px;
+}

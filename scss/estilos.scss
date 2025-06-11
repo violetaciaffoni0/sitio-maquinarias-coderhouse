@@ -1,0 +1,484 @@
+@import "variables";
+@import "base/funcionalidades";
+@import "base/generales";
+@import "base/querys";
+@import "components/footer";
+@import "components/header";
+@import "components/index-pagina-principal";
+@import "components/productos";
+@import "components/sobre-nosotros";
+
+// _variables.scss
+$color-principal: rgb(17, 17, 118);
+$color-secundario: rgb(22, 22, 99);
+$color-titulo: rgb(33, 20, 106);
+$color-fondo: white;
+$color-hover-boton: rgba(128, 128, 128, 0.489);
+$color-boton: rgba(128, 128, 128, 0.441);
+$color-boton-claro: rgba(128, 128, 128, 0.673);
+$color-hover-boton-contacto: rgb(19, 19, 136);
+$color-texto: #333;
+
+$font-principal: 'Raleway', sans-serif;
+$font-secundaria: 'Open Sans', sans-serif;
+
+body {
+  background-color: $color-fondo;
+}
+/* _main.scss*/
+
+.main-principal {
+    .titulo-principal-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(12, 12, 114, 0.768);
+        padding: 5px;
+        margin: 10px;
+        font-size: 30px;
+        font-weight: 200;
+        text-align: center;
+    }
+
+    .fondo-titulo-inicio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(20, 11, 98, 0.077);
+        padding: 0;
+        margin: 0;
+        background-color: white;
+    }
+
+    .principal-index {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        color: white;
+        height: 100vh;
+        justify-content: flex-start;
+        padding-left: 60px;
+        background-image: url("../img/index foto 1.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+        .contenido-principal-index {
+            h1 {
+                color: white;
+                position: relative;
+                z-index: 1;
+                max-width: 700px;
+                font-size: 70px;
+            }
+
+            .boton-principal-index {
+                display: inline-block;
+                background-color: rgba(128, 128, 128, 0.543);
+                color: black;
+                padding: 12px 24px;
+                text-decoration: none;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+        }
+    }
+}
+
+.productos-inicio {
+    .producto-destacado {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        background-color: white;
+    }
+
+    .tarjeta-producto {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 250px;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+        flex-wrap: wrap;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+p {
+    font-weight: 300;
+}
+
+.footer-contacto {
+    .redes {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .redes-sociales {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .iconos-redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    img {
+        width: 70px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+.fixed {
+    img {
+        width: 60px;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+    }
+}
+
+
+
+/*sobre nosotros*/
+
+header {
+    background-color: white;
+    height: 12vh;
+
+    .navbar-brand {
+        img {
+            height: 70px;
+            width: 200px;
+            margin: 10px;
+        }
+    }
+
+    .nav-link {
+        color: rgb(17, 17, 118) !important;
+    }
+
+    .boton {
+        border: 2px solid white;
+        border-radius: 2px;
+        color: rgb(22, 22, 99);
+        background-color: rgba(128, 128, 128, 0.441);
+
+        &:hover {
+            background-color: rgba(128, 128, 128, 0.489);
+        }
+    }
+
+}
+
+.carousel-inner div img {
+    width: 70%;
+    height: 500px;
+    padding: 20px;
+    background-color: white;
+}
+
+.logoo {
+    height: 120px;
+}
+
+
+/* main sobre nosotros*/
+
+.fondo-titulo-sobre-nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.titulo-sobre-nosotros {
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 250;
+    color: rgb(33, 20, 106);
+    margin: 0;
+    padding: 30px;
+    text-align: center;
+}
+
+.titulo-principal-nosotros {
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(33, 20, 106);
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    margin: 5px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contenido-sobre-nosotros {
+    p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+        background-color: transparent;
+        padding: 10px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.foto-negocio-nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    margin: 0;
+    background-color: transparent;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+.boton-centro {
+    text-align: center;
+
+    .boton-contacto {
+        display: inline-block;
+        background-color: rgba(128, 128, 128, 0.673);
+        color: white;
+        padding: 15px 35px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Raleway', sans-serif;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: rgb(19, 19, 136);
+        }
+    }
+}
+
+.footer-contacto {
+    background-color: white;
+    padding: 20px 0;
+    margin-top: 0;
+
+    .redes {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .redes-sociales {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .iconos-redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    img {
+        width: 70px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+/*productos*/
+/* Header */
+header {
+  background-color: white;
+  height: 12vh;
+
+  .navbar-brand {
+    img {
+      height: 70px;
+      width: 200px;
+      margin: 10px;
+    }
+  }
+
+  .nav-link {
+    color: rgb(17, 17, 118) !important;
+  }
+
+  .boton {
+    border: 2px solid white;
+    border-radius: 2px;
+    color: rgb(22, 22, 99);
+    background-color: rgba(128, 128, 128, 0.441);
+
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.489);
+    }
+  }
+}
+
+/* Carrusel */
+.carousel-inner {
+  div {
+    img {
+      width: 70%;
+      height: 500px;
+      padding: 20px;
+      background-color: white;
+    }
+  }
+}
+
+/* Imagen del logo (fuera del navbar) */
+.logoo {
+  height: 120px;
+}
+
+/* Main productos */
+.productos-pagina-productos {
+  background-color: white;
+  padding-bottom: 60px;
+  width: 100%;
+  text-align: center;
+
+  h2 {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 250;
+    color: rgba(33, 20, 106, 0.931);
+    margin: 20px 0;
+  }
+}
+
+.parrafo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0a1a57;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  max-width: 1200px;
+}
+
+.producto-destacado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  .tarjeta-producto {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 240px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid #eee;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      color: #333;
+      padding: 15px;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+    }
+  }
+}
+
+/* Footer */
+.producto-footer {
+  .redes {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .redes-sociales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .iconos-redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
+/* Imagen fija */
+.fixed {
+  img {
+    width: 60px;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+  }
+}
+

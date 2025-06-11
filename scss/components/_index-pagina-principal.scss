@@ -1,0 +1,228 @@
+// _variables.scss
+$color-principal: rgb(17, 17, 118);
+$color-secundario: rgb(22, 22, 99);
+$color-fondo: white;
+$color-boton-hover: rgba(128, 128, 128, 0.489);
+$color-boton: rgba(128, 128, 128, 0.441);
+$color-titulo: rgba(12, 12, 114, 0.768);
+$color-index: white;
+$font-principal: 'Raleway', sans-serif;
+$font-secundaria: 'Open Sans', sans-serif;
+$tipos-producto: 'eco', 'premium', 'clasico';
+
+
+// _mixins.scss
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin boton($bg-color, $text-color) {
+    display: inline-block;
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+// _extensiones.scss
+%titulo {
+    font-family: $font-principal;
+    font-weight: 200;
+    text-align: center;
+}
+
+// main.scss
+@import 'variables';
+@import 'mixins';
+@import 'extensiones';
+@import 'header';
+@import 'main';
+@import 'productos';
+@import 'footer';
+@import 'fixed';
+
+
+//_header.scss*
+
+header {
+    background-color: $color-fondo;
+    height: 12vh;
+
+    .navbar-brand {
+        img {
+            height: 70px;
+            width: 200px;
+            margin: 10px;
+        }
+    }
+
+    .nav-link {
+        color: $color-principal !important;
+    }
+
+    .boton {
+        border: 2px solid $color-fondo;
+        border-radius: 2px;
+        color: $color-secundario;
+        background-color: $color-boton;
+
+        &:hover {
+            background-color: $color-boton-hover;
+        }
+    }
+
+}
+
+.carousel-inner div img {
+    width: 70%;
+    height: 500px;
+    padding: 20px;
+    background-color: $color-fondo;
+}
+
+.logoo {
+    height: 120px;
+}
+
+
+/* _main.scss*/
+
+.main-principal {
+    .titulo-principal-main {
+        @extend %titulo;
+        @include flex-center;
+        color: $color-titulo;
+        padding: 5px;
+        margin: 10px;
+        font-size: 30px;
+    }
+}
+
+.fondo-titulo-inicio {
+    @include flex-center;
+    color: rgba(20, 11, 98, 0.077);
+    padding: 0;
+    margin: 0;
+    background-color: $color-fondo;
+
+}
+
+.principal-index {
+    @include flex-center;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    justify-content: flex-start;
+    padding-left: 60px;
+    background: url("../img/index foto 1.jpeg") no-repeat center/cover fixed;
+
+
+    .contenido-principal-index {
+        h1 {
+            color: $color-index;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            font-size: 70px;
+        }
+
+        .boton-principal-index {
+            @include boton(rgba(128, 128, 128, 0.543), black);
+            display: inline-block;
+            background-color: rgba(128, 128, 128, 0.543);
+            color: black;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+    }
+}
+
+
+.productos-inicio {
+    .producto-destacado {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+        padding: 30px;
+        background-color: $color-fondo;
+    }
+
+    .tarjeta-producto {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 250px;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+        flex-wrap: wrap;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+p {
+    font-weight: 300;
+}
+
+/*footer*/
+
+.footer-contacto {
+    .redes {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .redes-sociales {
+        @include flex-center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .iconos-redes {
+        @include flex-center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    img {
+        width: 70px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+.fixed {
+    img {
+        width: 60px;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+    }
+}
+

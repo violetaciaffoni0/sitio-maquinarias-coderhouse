@@ -1,0 +1,22 @@
+{
+  "name": "proyecto-coder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/violetaciaffoni0/sitio-maquinarias-coderhouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/violetaciaffoni0/sitio-maquinarias-coderhouse/issues"
+  },
+  "homepage": "https://github.com/violetaciaffoni0/sitio-maquinarias-coderhouse#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

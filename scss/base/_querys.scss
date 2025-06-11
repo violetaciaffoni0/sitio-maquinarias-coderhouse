@@ -1,0 +1,104 @@
+/*! -------------------- MEDIA QUERY-------------------- */
+
+/* MacBook Pro 13'' (1280px) */
+@media screen and (max-width: 1280px) {
+  .nav-principal a {
+    font-size: 20px;
+  }
+
+  .logoo {
+    height: 110px;
+  }
+
+  .tarjeta-producto,
+  .producto {
+    width: 230px;
+  }
+
+  .titulo-principal-main,
+  .titulo-sobre-nosotros,
+  .titulo-marcas {
+    font-size: 28px;
+  }
+
+  .parrafo {
+    font-size: 28px;
+  }
+
+  .iconos-redes img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Tablets (768px) */
+@media screen and (max-width: 768px) {
+  /*.header { flex-direction: column;}*/
+
+  .logoo {
+    height: 110px;
+  }
+
+  .nav-principal a {
+    font-size: 20px;
+  }
+
+  .producto,
+  .tarjeta-producto {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .grid-galeria-marcas {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
+  }
+
+  .grid-galeria {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
+  }
+}
+
+/* Celulares grandes (480px) */
+@media screen and (max-width: 480px) {
+  .nav-principal a {
+    font-size: 20px;
+    flex-direction: column;
+  }
+
+  .logoo {
+    height: 90px;
+  }
+
+  .titulo-principal-main,
+  .titulo-sobre-nosotros {
+    font-size: 24px;
+  }
+}
+
+/* Celulares pequeños (350px) */
+@media screen and (max-width: 350px) {
+  .nav-principal a {
+    font-size: 20px;
+    flex-direction: column;
+  }
+
+  .titulo-principal-main,
+  .titulo-sobre-nosotros {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width:350px) {
+  .grid-galeria {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
+  }
+
+  .grid-item {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
