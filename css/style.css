@@ -204,13 +204,14 @@ header {
 /*Animaciones*/
 
 .por-que-elegirnos {
+  font-family: 'Raleway', sans-serif;
   text-align: center;
   padding: 30px;
 }
 
 .razones {
-  background-color: lightcoral;
-  color: white;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: black;
   padding: 12px;
   width: 200px;
   margin: 10px auto;
@@ -222,7 +223,7 @@ header {
 
 .razones:hover {
   width: 60%;
-  background-color: rgb(9, 9, 99);
+  background-color: rgba(114, 11, 11, 0.633);
 }
 
 /* Efectos de animación */
