@@ -222,7 +222,7 @@ header {
 
 .razones:hover {
   width: 60%;
-  background-color: darkred;
+  background-color: rgb(9, 9, 99);
 }
 
 /* Efectos de animación */
