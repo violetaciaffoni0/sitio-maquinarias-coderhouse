@@ -67,7 +67,7 @@ header {
 }
 
 .navbar-brand img {
-  height: 70px;
+  height: 50px;
   width: 200px;
   margin: 10px;
 
@@ -602,6 +602,111 @@ footer i:hover {
 /*! -------------------- MEDIA QUERY-------------------- */
 
 /* MacBook Pro 13'' (1280px) */
+/*@media screen and (max-width: 1280px) {
+  .nav-principal a {
+    font-size: 20px;
+  }
+
+  .logoo {
+    height: 110px;
+  }
+
+  .tarjeta-producto,
+  .producto {
+    width: 230px;
+  }
+
+  .titulo-principal-main,
+  .titulo-sobre-nosotros,
+  .titulo-marcas {
+    font-size: 28px;
+  }
+
+  .parrafo {
+    font-size: 28px;
+  }
+
+  .iconos-redes img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Tablets (768px) */
+/*@media screen and (max-width: 768px) {
+  /*.header { flex-direction: column;}*/
+
+  /*.logoo {
+    height: 110px;
+  }
+
+  .nav-principal a {
+    font-size: 20px;
+  }
+
+  .producto,
+  .tarjeta-producto {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .grid-galeria-marcas {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
+  }
+
+  .grid-galeria {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
+  }
+}
+
+/* Celulares grandes (480px) */
+/*@media screen and (max-width: 480px) {
+  .nav-principal a {
+    font-size: 20px;
+    flex-direction: column;
+  }
+
+  .logoo {
+    height: 90px;
+  }
+
+  .titulo-principal-main,
+  .titulo-sobre-nosotros {
+    font-size: 24px;
+  }
+}
+
+/* Celulares pequeños (350px) */
+/*@media screen and (max-width: 350px) {
+  .nav-principal a {
+    font-size: 20px;
+    flex-direction: column;
+  }
+
+  .titulo-principal-main,
+  .titulo-sobre-nosotros {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width:350px) {
+  .grid-galeria {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 220px;
+  }
+
+  .grid-item {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}*/
+
+/*! -------------------- MEDIA QUERIES CORREGIDAS -------------------- */
+
+/* MacBook Pro 13'' (1280px) */
 @media screen and (max-width: 1280px) {
   .nav-principal a {
     font-size: 20px;
@@ -634,14 +739,16 @@ footer i:hover {
 
 /* Tablets (768px) */
 @media screen and (max-width: 768px) {
-  /*.header { flex-direction: column;}*/
+  nav.navbar {
+    background-color: white; /* ✅ CORREGIDO: fondo blanco en mobile */
+  }
 
   .logoo {
-    height: 110px;
+    height: 100px;
   }
 
   .nav-principal a {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .producto,
@@ -650,22 +757,43 @@ footer i:hover {
     max-width: 300px;
   }
 
-  .grid-galeria-marcas {
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 220px;
-  }
-
+  .grid-galeria-marcas,
   .grid-galeria {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: 220px;
+  }
+  .principal-index {
+    background-image: url(../img/index-mobiles.jpeg);
+    /*flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 20px;
+
+  }
+
+  .contenido-principal-index h1 {
+    font-size: 2rem;
+  }
+
+  .boton-principal-index {
+    margin-top: 15px;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }
 
 /* Celulares grandes (480px) */
 @media screen and (max-width: 480px) {
-  .nav-principal a {
-    font-size: 20px;
+  .nav-principal {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-principal a {
+    font-size: 18px;
   }
 
   .logoo {
@@ -681,8 +809,7 @@ footer i:hover {
 /* Celulares pequeños (350px) */
 @media screen and (max-width: 350px) {
   .nav-principal a {
-    font-size: 20px;
-    flex-direction: column;
+    font-size: 16px;
   }
 
   .titulo-principal-main,
@@ -690,9 +817,6 @@ footer i:hover {
     font-size: 20px;
   }
 
-}
-
-@media screen and (max-width:350px) {
   .grid-galeria {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: 220px;
