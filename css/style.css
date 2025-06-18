@@ -339,7 +339,7 @@ header {
 
 
 /**-------------------- CONTACTO --------------------*/
-.tirulo-contacto p {
+.tirulo-contacto h1{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,7 +359,7 @@ header {
   text-align: center;
 }
 
-.titulo-contacto p {
+.titulo-contacto h1 {
   color: #0c0c72;
   font-size: 30px;
   font-weight: 400;
@@ -407,7 +407,7 @@ header {
   text-align: center;
 }
 
-.productos-pagina-productos h2 {
+.productos-pagina-productos h1 {
   display: flex;
   width: 100%;
   text-align: center;
@@ -493,7 +493,7 @@ header {
 }
 
 /**-------------------- MARCAS --------------------*/
-.fondo-titulo-marcas {
+.fondo-titulo-marcas h1 {
   display: flex;
   justify-content: center;
   align-items: center;
