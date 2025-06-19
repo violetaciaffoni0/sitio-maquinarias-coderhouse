@@ -1,145 +1,89 @@
-@use "components/variables";
-@use "base/funcionalidades";
-@use "base/generales";
-@use "base/querys";
-@use "components/contacto";
-@use "components/footer";
-@use "components/header";
-@use "components/index-pagina-principal";
-@use "components/marcas";
-@use "components/mixins";
-@use "components/productos";
-@use "components/sobre-nosotros";
-
-// _variables.scss
-$color-principal: rgb(17, 17, 118);
-$color-secundario: rgb(22, 22, 99);
-$color-fondo: white;
-$color-boton-hover: rgba(128, 128, 128, 0.489);
-$color-boton: rgba(128, 128, 128, 0.441);
-$color-titulo: rgba(12, 12, 114, 0.768);
-$color-index: white;
-$font-principal: 'Raleway', sans-serif;
-$font-secundaria: 'Open Sans', sans-serif;
-$tipos-producto: 'eco', 'premium', 'clasico';
-
-
-// _mixins.scss
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin boton($bg-color, $text-color) {
-    display: inline-block;
-    background-color: $bg-color;
-    color: $text-color;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-// _extensiones.scss
-%titulo {
-    font-family: $font-principal;
-    font-weight: 200;
-    text-align: center;
-}
-
-// main.scss
-/*@use 'variables';
-@use'mixins';
-@use 'extensiones';
-@use 'header';
-@use 'main';
-@use 'productos';
-@use 'footer';
-@use 'fixed';*/
+  @use "../variables" as variables;
+  @use "../mixins" as mixins;
+  @use "../extensiones"; // Asegurate de que este archivo use @forward si vas a usar @use
+  @use "../base/funcionalidades";
+  @use "../base/generales";
+  @use "../base/querys";
 
 
 
-// _contacto.scss
+  // _contacto.scss
 
-.titulo-contacto{
-    background-color: $color-fondo;
-    padding: 20px 0;
-    text-align: center;
+  .titulo-contacto {
+      background-color: variables.$color-fondo;
+      padding: 20px 0;
+      text-align: center;
 
-    h1 {
+      h1 {
+          @extend %titulo; // placeholder extendido sin alias
+          @include mixins.flex-center;
+          color: variables.$color-titulo;
+          padding: 5px;
+          margin: 10px;
+          background-color: variables.$color-fondo;
+          font-size: 30px;
+      }
+  }
 
-        @extend %titulo;
-        @include flex-center;
-        color: $color-titulo;
-        padding: 5px;
-        margin: 10px;
-        background-color: $color-fondo;
-        font-size: 30px;
-    }
-}
+  .iconos-redes {
+      @include mixins.flex-center;
+      flex-direction: column;
+      gap: 20px;
+      background-color: variables.$color-fondo;
+      padding: 20px 0;
 
-.iconos-redes {
-    @include flex-center;
-    flex-direction: column;
-    gap: 20px;
-    background-color: $color-fondo;
-    padding: 20px 0;
+      i {
+          color: gray;
+          font-size: 50px;
+          transition: color 0.3s ease;
 
-    i {
-        color: gray;
-        font-size: 50px;
-        transition: color 0.3s ease;
+          &:hover {
+              color: brown;
+          }
+      }
+  }
 
-        &:hover {
-            color: brown;
-        }
-    }
-}
+  .contactos-principl {
+      img {
+          height: auto;
+          max-width: 100%;
+          background-color: variables.$color-fondo;
+      }
+  }
 
-.contactos-principl {
-    img {
-        height: auto;
-        max-width: 100%;
-        background-color: $color-fondo;
-    }
-}
+  .footer-contacto {
+      background-color: variables.$color-fondo;
+      padding: 20px 0;
+      margin-top: 0;
 
-.footer-contacto {
-    background-color: $color-fondo;
-    padding: 20px 0;
-    margin-top: 0;
+      .contenido-footer-contacto {
+          @include mixins.flex-center;
+          max-width: 800px;
+          margin: 0 auto;
+          gap: 30px;
+          flex-wrap: wrap;
+          text-align: center;
+      }
 
-    .contenido-footer-contacto {
-        @include flex-center;
-        max-width: 800px;
-        margin: 0 auto;
-        gap: 30px;
-        flex-wrap: wrap;
-        text-align: center;
-    }
+      .redes-footer-contacto {
+          h3 {
+              font-family: variables.$font-principal;
+              color: variables.$color-index;
+              font-size: 15px;
+          }
+      }
 
-    .redes-footer-contacto {
-        h3 {
-            font-family: $font-principal;
-            color: $color-index;
-            font-size: 15px;
-        }
-    }
+      .mapa-contacto {
+          border-radius: 8px;
+          overflow: hidden;
+          width: 130px;
+          height: 130px;
+          background-color: transparent;
 
-    .mapa-contacto {
-        border-radius: 8px;
-        overflow: hidden;
-        width: 130px;
-        height: 130px;
-        background-color: transparent;
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-    }
-}
+          iframe {
+              width: 100%;
+              height: 100%;
+              border: 0;
+          }
+      }
+  }

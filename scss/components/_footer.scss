@@ -1,31 +1,33 @@
-@use "../components/variables" as variables;
-@use "../base/funcionalidades" as *;
+ @use "./variables" as variables;
+ @use "./mixins" as mixins;
+  @use "./extensiones";
 
-.footer-contacto {
-  background-color: variables.$color-fondo;
-  padding: 20px 0;
-  margin-top: 0;
+ @use "../base/funcionalidades";
+ @use "../base/generales";
+ @use "../base/querys";
 
-  .redes {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 300;
-  }
+ .footer-contacto {
+     background-color: variables.$color-fondo;
+     padding: 20px 0;
+     margin-top: 0;
 
-  .redes-sociales,
-  .iconos-redes {
-    @include flex-center;
-    flex-direction: column;
-    margin: 30px 0;
-    padding: 10px;
-  }
+     .redes {
+         text-align: center;
+         font-size: 18px;
+         font-weight: 300;
+     }
 
-  img {
-    width: 70px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-}
-footer {
-  background-color: red;
-}
+     .redes-sociales,
+     .iconos-redes {
+         @include mixins.flex-center;
+         flex-direction: column;
+         margin: 30px 0;
+         padding: 10px;
+     }
+
+     img {
+         width: 70px;
+         height: auto;
+         margin-bottom: 10px;
+     }
+ }

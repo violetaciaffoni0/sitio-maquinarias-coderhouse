@@ -1,14 +1,18 @@
+
 @use "components/variables";
+@use "components/mixins";
+@use "components/extensiones";
+
 @use "base/funcionalidades";
 @use "base/generales";
 @use "base/querys";
+
+// Aquí importás los componentes completos
 @use "components/contacto";
 @use "components/footer";
 @use "components/header";
 @use "components/index-pagina-principal";
 @use "components/marcas";
-@use "components/mixins";
 @use "components/productos";
 @use "components/sobre-nosotros";
-
 

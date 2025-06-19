@@ -1,243 +1,173 @@
-@use "components/variables";
-@use "base/funcionalidades";
-@use "base/generales";
-@use "base/querys";
-@use "components/contacto";
-@use "components/footer";
-@use "components/header";
-@use "components/index-pagina-principal";
-@use "components/marcas";
-@use "components/mixins";
-@use "components/productos";
-@use "components/sobre-nosotros";
+ @use "./variables" as variables;
+ @use "./mixins" as mixins;
+ @use "./extensiones"; // Lo importo sin alias para que el placeholder funcione con @extend %titulo;
 
+ @use "../base/funcionalidades";
+ @use "../base/generales";
+ @use "../base/querys";
 
+ // Header
+ header {
+     background-color: variables.$color-fondo;
+     height: 12vh;
 
-// _variables.scss
-$color-principal: rgb(17, 17, 118);
-$color-secundario: rgb(22, 22, 99);
-$color-fondo: white;
-$color-boton-hover: rgba(128, 128, 128, 0.489);
-$color-boton: rgba(128, 128, 128, 0.441);
-$color-titulo: rgba(12, 12, 114, 0.768);
-$color-index: white;
-$font-principal: 'Raleway', sans-serif;
-$font-secundaria: 'Open Sans', sans-serif;
-$tipos-producto: 'eco', 'premium', 'clasico';
+     .navbar-brand {
+         img {
+             height: 70px;
+             width: 200px;
+             margin: 10px;
+         }
+     }
 
+     .nav-link {
+         color: variables.$color-principal !important;
+     }
 
-// _mixins.scss
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+     .boton {
+         border: 2px solid variables.$color-fondo;
+         border-radius: 2px;
+         color: variables.$color-secundario;
+         background-color: variables.$color-boton;
 
-@mixin boton($bg-color, $text-color) {
-    display: inline-block;
-    background-color: $bg-color;
-    color: $text-color;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
+         &:hover {
+             background-color: variables.$color-boton-hover;
+         }
+     }
+ }
 
-// _extensiones.scss
-%titulo {
-    font-family: $font-principal;
-    font-weight: 200;
-    text-align: center;
-}
+ .carousel-inner div img {
+     width: 70%;
+     height: 500px;
+     padding: 20px;
+     background-color: variables.$color-fondo;
+ }
 
-// main.scss
-/*@use 'variables';
-@use 'mixins';
-@use 'extensiones';
-@use'header';
-@use 'main';
-@use 'productos';
-@use 'footer';
-@use 'fixed';*/
+ .logoo {
+     height: 120px;
+ }
 
+ /* Main */
 
-//_header.scss*
+ .main-principal {
+     .titulo-principal-main {
+         @extend %titulo; // Sin prefijo para evitar error
+         @include mixins.flex-center;
+         color: variables.$color-titulo;
+         padding: 5px;
+         margin: 10px;
+         font-size: 30px;
+     }
+ }
 
-header {
-    background-color: $color-fondo;
-    height: 12vh;
+ .fondo-titulo-inicio {
+     @include mixins.flex-center;
+     color: rgba(20, 11, 98, 0.077);
+     padding: 0;
+     margin: 0;
+     background-color: variables.$color-fondo;
+ }
 
-    .navbar-brand {
-        img {
-            height: 70px;
-            width: 200px;
-            margin: 10px;
-        }
-    }
+ .principal-index {
+     @include mixins.flex-center;
+     text-align: center;
+     color: white;
+     height: 100vh;
+     justify-content: flex-start;
+     padding-left: 60px;
+     background: url("../img/index foto 1.jpeg") no-repeat center/cover fixed;
 
-    .nav-link {
-        color: $color-principal !important;
-    }
+     .contenido-principal-index {
+         h1 {
+             color: variables.$color-index;
+             position: relative;
+             z-index: 1;
+             max-width: 700px;
+             font-size: 70px;
+         }
 
-    .boton {
-        border: 2px solid $color-fondo;
-        border-radius: 2px;
-        color: $color-secundario;
-        background-color: $color-boton;
+         .boton-principal-index {
+             @include mixins.boton(rgba(128, 128, 128, 0.543), black);
+             margin-top: 15px;
+         }
+     }
+ }
 
-        &:hover {
-            background-color: $color-boton-hover;
-        }
-    }
+ /* Productos inicio */
 
-}
+ .productos-inicio {
+     .producto-destacado {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         align-items: center;
+         gap: 30px;
+         padding: 30px;
+         background-color: variables.$color-fondo;
+     }
 
-.carousel-inner div img {
-    width: 70%;
-    height: 500px;
-    padding: 20px;
-    background-color: $color-fondo;
-}
+     .tarjeta-producto {
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         width: 250px;
+         padding: 10px;
+         text-align: center;
+         transition: transform 0.2s;
+         flex-wrap: wrap;
 
-.logoo {
-    height: 120px;
-}
+         &:hover {
+             transform: scale(1.05);
+         }
+     }
+ }
 
+ img {
+     width: 100%;
+     height: auto;
+     border-radius: 8px;
+ }
 
-/* _main.scss*/
+ p {
+     font-weight: 300;
+ }
 
-.main-principal {
-    .titulo-principal-main {
-        @extend %titulo;
-        @include flex-center;
-        color: $color-titulo;
-        padding: 5px;
-        margin: 10px;
-        font-size: 30px;
-    }
-}
+ /* Footer */
 
-.fondo-titulo-inicio {
-    @include flex-center;
-    color: rgba(20, 11, 98, 0.077);
-    padding: 0;
-    margin: 0;
-    background-color: $color-fondo;
+ .footer-contacto {
+     .redes {
+         text-align: center;
+         font-size: 18px;
+         font-weight: 300;
+     }
 
-}
+     .redes-sociales {
+         @include mixins.flex-center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 30px 0;
+     }
 
-.principal-index {
-    @include flex-center;
-    text-align: center;
-    color: white;
-    height: 100vh;
-    justify-content: flex-start;
-    padding-left: 60px;
-    background: url("../img/index foto 1.jpeg") no-repeat center/cover fixed;
+     .iconos-redes {
+         @include mixins.flex-center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         padding: 10px;
+     }
 
+     img {
+         width: 70px;
+         height: auto;
+         margin-bottom: 10px;
+     }
+ }
 
-    .contenido-principal-index {
-        h1 {
-            color: $color-index;
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            font-size: 70px;
-        }
-
-        .boton-principal-index {
-            @include boton(rgba(128, 128, 128, 0.543), black);
-            display: inline-block;
-            background-color: rgba(128, 128, 128, 0.543);
-            color: black;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-    }
-}
-
-
-.productos-inicio {
-    .producto-destacado {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        gap: 30px;
-        padding: 30px;
-        background-color: $color-fondo;
-    }
-
-    .tarjeta-producto {
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 250px;
-        padding: 10px;
-        text-align: center;
-        transition: transform 0.2s;
-        flex-wrap: wrap;
-
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
-}
-
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-p {
-    font-weight: 300;
-}
-
-/*footer*/
-
-.footer-contacto {
-    .redes {
-        text-align: center;
-        font-size: 18px;
-        font-weight: 300;
-    }
-
-    .redes-sociales {
-        @include flex-center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 30px 0;
-    }
-
-    .iconos-redes {
-        @include flex-center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    img {
-        width: 70px;
-        height: auto;
-        margin-bottom: 10px;
-    }
-}
-
-.fixed {
-    img {
-        width: 60px;
-        position: fixed;
-        bottom: 50px;
-        right: 20px;
-    }
-}
-
+ .fixed {
+     img {
+         width: 60px;
+         position: fixed;
+         bottom: 50px;
+         right: 20px;
+     }
+ }

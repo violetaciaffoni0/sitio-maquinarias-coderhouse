@@ -1,19 +1,3 @@
-@use "components/variables";
-@use "base/funcionalidades";
-@use "base/generales";
-@use "base/querys";
-@use "components/contacto";
-@use "components/footer";
-@use "components/header";
-@use "components/index-pagina-principal";
-@use "components/marcas";
-@use "components/mixins";
-@use "components/productos";
-@use "components/sobre-nosotros";
-
-
-
-// _variables.scss
 $color-principal: rgb(17, 17, 118);
 $color-secundario: rgb(22, 22, 99);
 $color-titulo: rgba(33, 20, 106, 0.931);
@@ -25,37 +9,3 @@ $color-parrafo: #333;
 
 $font-principal: 'Raleway', sans-serif;
 $font-secundaria: 'Open Sans', sans-serif;
-
-// _mixins.scss
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-// _extensiones.scss
-%parrafo-grande {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-fondo;
-    padding: 10px 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    font-size: 25px;
-    font-weight: 400;
-    font-family: $font-principal;
-    text-align: center;
-    max-width: 1200px;
-}
-
-// producto.scss
-/*@use 'variables';
-@use 'mixins';
-@use 'extensiones';
-@use 'header';
-@use 'carousel';
-@use 'logo';
-@use 'productos';
-@use 'footer';
-@use 'fixed';*/

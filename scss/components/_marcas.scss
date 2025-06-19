@@ -1,80 +1,24 @@
-@use "components/variables";
-@use "base/funcionalidades";
-@use "base/generales";
-@use "base/querys";
-@use "components/contacto";
-@use "components/footer";
-@use "components/header";
-@use "components/index-pagina-principal";
-@use "components/marcas";
-@use "components/mixins";
-@use "components/productos";
-@use "components/sobre-nosotros";
+@use "./variables";
+@use "./mixins";
+ @use "./extensiones";
 
-
-
-
-// _variables.scss
-$color-principal: rgb(17, 17, 118);
-$color-secundario: rgb(22, 22, 99);
-$color-fondo: white;
-$color-boton-hover: rgba(128, 128, 128, 0.489);
-$color-boton: rgba(128, 128, 128, 0.441);
-$color-titulo: rgba(12, 12, 114, 0.768);
-$color-index: white;
-$font-principal: 'Raleway', sans-serif;
-$font-secundaria: 'Open Sans', sans-serif;
-$tipos-producto: 'eco', 'premium', 'clasico';
-
-
-// _mixins.scss
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin boton($bg-color, $text-color) {
-    display: inline-block;
-    background-color: $bg-color;
-    color: $text-color;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-// _extensiones.scss
-%titulo {
-    font-family: $font-principal;
-    font-weight: 200;
-    text-align: center;
-}
-
-// main.scss
-/*@use'variables';
-@use 'mixins';
-@use 'extensiones';
-@use 'header';
-@use'main';
-@use 'productos';
-@use 'footer';
-@use 'fixed';*/
-
+@use "../base/funcionalidades";
+@use "../base/generales";
+@use "../base/querys";
 
 // _marcas.scss
+
 .fondo-titulo-marcas {
-    background-color: $color-fondo;
+    background-color: variables.$color-fondo;
     padding: 10px 0;
     text-align: center;
 
     h1 {
         @extend %titulo;
-        color: $color-titulo;
+        color: variables.$color-titulo;
         font-size: 25px;
         margin: 0;
+        font-family: variables.$font-principal;
     }
 }
 
@@ -102,18 +46,20 @@ $tipos-producto: 'eco', 'premium', 'clasico';
 }
 
 .footer-contacto {
-    @extend .footer-contacto;
+    background-color: variables.$color-fondo;
+    padding: 20px 0;
+    margin-top: 0;
 
     p {
-        font-family: $font-secundaria;
+        font-family: variables.$font-secundaria;
         font-size: 14px;
-        color: $color-principal;
+        color: variables.$color-principal;
         margin: 0;
         text-align: center;
     }
 
     .redes-sociales {
-        @include flex-center;
+        @include mixins.flex-center;
         flex-direction: column;
         margin: 30px 0;
         padding: 10px;
@@ -123,12 +69,12 @@ $tipos-producto: 'eco', 'premium', 'clasico';
             gap: 10px;
 
             a {
-                color: $color-principal;
+                color: variables.$color-principal;
                 font-size: 20px;
                 transition: color 0.3s;
 
                 &:hover {
-                    color: darken($color-principal, 15%);
+                    color: darken(variables.$color-principal, 15%);
                 }
             }
         }

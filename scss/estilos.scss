@@ -1,21 +1,4 @@
-
-@use "components/variables";
-@use "base/funcionalidades";
-@use "base/generales";
-@use "base/querys";
-@use "components/contacto";
-@use "components/footer";
-@use "components/header";
-@use "components/index-pagina-principal";
-@use "components/marcas";
-@use "components/mixins";
-@use "components/productos";
-@use "components/sobre-nosotros";
-
-
-
-
-// _variables.scss
+// VARIABLES
 $color-principal: rgb(17, 17, 118);
 $color-secundario: rgb(22, 22, 99);
 $color-titulo: rgb(33, 20, 106);
@@ -25,314 +8,50 @@ $color-boton: rgba(128, 128, 128, 0.441);
 $color-boton-claro: rgba(128, 128, 128, 0.673);
 $color-hover-boton-contacto: rgb(19, 19, 136);
 $color-texto: #333;
+$color-index: white;
 
 $font-principal: 'Raleway', sans-serif;
 $font-secundaria: 'Open Sans', sans-serif;
 
+$tipos-producto: 'eco', 'premium', 'clasico';
+
+// MIXINS
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin boton($bg-color, $text-color) {
+  display: inline-block;
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+// EXTENSIONS
+%titulo {
+  font-family: $font-principal;
+  font-weight: 200;
+  text-align: center;
+}
+
+// GLOBAL BODY
 body {
   background-color: $color-fondo;
-}
-/* _main.scss*/
-
-.main-principal {
-    .titulo-principal-main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgba(12, 12, 114, 0.768);
-        padding: 5px;
-        margin: 10px;
-        font-size: 30px;
-        font-weight: 200;
-        text-align: center;
-    }
-
-    .fondo-titulo-inicio {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgba(20, 11, 98, 0.077);
-        padding: 0;
-        margin: 0;
-        background-color: white;
-    }
-
-    .principal-index {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        color: white;
-        height: 100vh;
-        justify-content: flex-start;
-        padding-left: 60px;
-        background-image: url("../img/index foto 1.jpeg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-
-        .contenido-principal-index {
-            h1 {
-                color: white;
-                position: relative;
-                z-index: 1;
-                max-width: 700px;
-                font-size: 70px;
-            }
-
-            .boton-principal-index {
-                display: inline-block;
-                background-color: rgba(128, 128, 128, 0.543);
-                color: black;
-                padding: 12px 24px;
-                text-decoration: none;
-                border-radius: 8px;
-                font-size: 16px;
-                font-weight: bold;
-                transition: background-color 0.3s ease;
-            }
-        }
-    }
+  margin: 0;
+  font-family: $font-secundaria;
+  color: $color-texto;
 }
 
-.productos-inicio {
-    .producto-destacado {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        gap: 30px;
-        padding: 30px;
-        background-color: white;
-    }
-
-    .tarjeta-producto {
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 250px;
-        padding: 10px;
-        text-align: center;
-        transition: transform 0.2s;
-        flex-wrap: wrap;
-
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
-}
-
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-p {
-    font-weight: 300;
-}
-
-.footer-contacto {
-    .redes {
-        text-align: center;
-        font-size: 18px;
-        font-weight: 300;
-    }
-
-    .redes-sociales {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 30px 0;
-    }
-
-    .iconos-redes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    img {
-        width: 70px;
-        height: auto;
-        margin-bottom: 10px;
-    }
-}
-
-.fixed {
-    img {
-        width: 60px;
-        position: fixed;
-        bottom: 50px;
-        right: 20px;
-    }
-}
-
-
-
-/*sobre nosotros*/
-
+// HEADER
 header {
-    background-color: white;
-    height: 12vh;
-
-    .navbar-brand {
-        img {
-            height: 70px;
-            width: 200px;
-            margin: 10px;
-        }
-    }
-
-    .nav-link {
-        color: rgb(17, 17, 118) !important;
-    }
-
-    .boton {
-        border: 2px solid white;
-        border-radius: 2px;
-        color: rgb(22, 22, 99);
-        background-color: rgba(128, 128, 128, 0.441);
-
-        &:hover {
-            background-color: rgba(128, 128, 128, 0.489);
-        }
-    }
-
-}
-
-.carousel-inner div img {
-    width: 70%;
-    height: 500px;
-    padding: 20px;
-    background-color: white;
-}
-
-.logoo {
-    height: 120px;
-}
-
-
-/* main sobre nosotros*/
-
-.fondo-titulo-sobre-nosotros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
-
-.titulo-sobre-nosotros {
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px;
-    font-weight: 250;
-    color: rgb(33, 20, 106);
-    margin: 0;
-    padding: 30px;
-    text-align: center;
-}
-
-.titulo-principal-nosotros {
-    font-size: 10px;
-    font-weight: 500;
-    font-family: 'Raleway', sans-serif;
-    color: rgb(33, 20, 106);
-    background-color: rgb(255, 255, 255);
-    padding: 10px 15px;
-    margin: 5px auto;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.contenido-sobre-nosotros {
-    p {
-        font-family: 'Raleway', sans-serif;
-        font-size: 18px;
-        line-height: 1.6;
-        color: #333;
-        background-color: transparent;
-        padding: 10px 20px;
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-
-.foto-negocio-nosotros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 15px 0;
-    margin: 0;
-    background-color: transparent;
-
-    img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-}
-
-.boton-centro {
-    text-align: center;
-
-    .boton-contacto {
-        display: inline-block;
-        background-color: rgba(128, 128, 128, 0.673);
-        color: white;
-        padding: 15px 35px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        font-family: 'Raleway', sans-serif;
-        margin-top: 30px;
-        margin-bottom: 60px;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: rgb(19, 19, 136);
-        }
-    }
-}
-
-.footer-contacto {
-    background-color: white;
-    padding: 20px 0;
-    margin-top: 0;
-
-    .redes {
-        text-align: center;
-        font-size: 18px;
-        font-weight: 300;
-    }
-
-    .redes-sociales {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 30px 0;
-    }
-
-    .iconos-redes {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    img {
-        width: 70px;
-        height: auto;
-        margin-bottom: 10px;
-    }
-}
-/*productos*/
-/* Header */
-header {
-  background-color: white;
+  background-color: $color-fondo;
   height: 12vh;
 
   .navbar-brand {
@@ -344,53 +63,128 @@ header {
   }
 
   .nav-link {
-    color: rgb(17, 17, 118) !important;
+    color: $color-principal !important;
   }
 
   .boton {
-    border: 2px solid white;
+    border: 2px solid $color-fondo;
     border-radius: 2px;
-    color: rgb(22, 22, 99);
-    background-color: rgba(128, 128, 128, 0.441);
+    color: $color-secundario;
+    background-color: $color-boton;
 
     &:hover {
-      background-color: rgba(128, 128, 128, 0.489);
+      background-color: $color-hover-boton;
     }
   }
 }
 
-/* Carrusel */
-.carousel-inner {
-  div {
-    img {
-      width: 70%;
-      height: 500px;
-      padding: 20px;
-      background-color: white;
-    }
-  }
+// CAROUSEL
+.carousel-inner div img {
+  width: 70%;
+  height: 500px;
+  padding: 20px;
+  background-color: $color-fondo;
 }
 
-/* Imagen del logo (fuera del navbar) */
+// LOGO IMAGE
 .logoo {
   height: 120px;
 }
 
-/* Main productos */
+// MAIN - INDEX PAGE
+.main-principal {
+  .titulo-principal-main {
+    @extend %titulo;
+    @include flex-center;
+    color: rgba(12, 12, 114, 0.768);
+    padding: 5px;
+    margin: 10px;
+    font-size: 30px;
+  }
+
+  .fondo-titulo-inicio {
+    @include flex-center;
+    color: rgba(20, 11, 98, 0.077);
+    padding: 0;
+    margin: 0;
+    background-color: $color-fondo;
+  }
+
+  .principal-index {
+    @include flex-center;
+    text-align: center;
+    color: $color-index;
+    height: 100vh;
+    justify-content: flex-start;
+    padding-left: 60px;
+    background: url("../img/index foto 1.jpeg") no-repeat center/cover fixed;
+
+    .contenido-principal-index {
+      h1 {
+        color: $color-index;
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        font-size: 70px;
+      }
+
+      .boton-principal-index {
+        @include boton(rgba(128, 128, 128, 0.543), black);
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+// PRODUCTOS - MAIN PRODUCTS
+.productos-inicio {
+  .producto-destacado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    background-color: $color-fondo;
+  }
+
+  .tarjeta-producto {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+    flex-wrap: wrap;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+p {
+  font-weight: 300;
+}
+
+// PRODUCTOS PAGE - DETAILED
 .productos-pagina-productos {
-  background-color: white;
+  background-color: $color-fondo;
   padding-bottom: 60px;
   width: 100%;
   text-align: center;
 
   h2 {
-    display: flex;
-    width: 100%;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
+    @extend %titulo;
     font-size: 25px;
     font-weight: 250;
-    color: rgba(33, 20, 106, 0.931);
+    color: $color-titulo;
     margin: 20px 0;
   }
 }
@@ -400,13 +194,13 @@ header {
   justify-content: center;
   align-items: center;
   color: #0a1a57;
-  background-color: white;
+  background-color: $color-fondo;
   padding: 10px 20px;
   margin: 20px auto;
   border-radius: 10px;
   font-size: 25px;
   font-weight: 400;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-principal;
   text-align: center;
   max-width: 1200px;
 }
@@ -418,7 +212,7 @@ header {
   gap: 20px;
 
   .tarjeta-producto {
-    background-color: white;
+    background-color: $color-fondo;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     width: 240px;
@@ -443,32 +237,182 @@ header {
       font-size: 16px;
       color: #333;
       padding: 15px;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $font-secundaria;
       margin: 0;
     }
   }
 }
 
-/* Footer */
-.producto-footer {
+// SOBRE NOSOTROS PAGE
+.fondo-titulo-sobre-nosotros {
+  @include flex-center;
+  padding: 0;
+  margin: 0;
+}
+
+.titulo-sobre-nosotros {
+  font-family: $font-principal;
+  font-size: 30px;
+  font-weight: 250;
+  color: $color-titulo;
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+}
+
+.titulo-principal-nosotros {
+  font-size: 10px;
+  font-weight: 500;
+  font-family: $font-principal;
+  color: $color-titulo;
+  background-color: $color-fondo;
+  padding: 10px 15px;
+  margin: 5px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contenido-sobre-nosotros {
+  p {
+    font-family: $font-principal;
+    font-size: 18px;
+    line-height: 1.6;
+    color: $color-texto;
+    background-color: transparent;
+    padding: 10px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.foto-negocio-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0;
+  margin: 0;
+  background-color: transparent;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+.boton-centro {
+  text-align: center;
+
+  .boton-contacto {
+    @include boton($color-boton-claro, white);
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    &:hover {
+      background-color: $color-hover-boton-contacto;
+    }
+  }
+}
+
+// CONTACTO PAGE
+.titulo-contacto {
+  background-color: $color-fondo;
+  padding: 20px 0;
+  text-align: center;
+
+  h1 {
+    @extend %titulo;
+    @include flex-center;
+    color: $color-titulo;
+    padding: 5px;
+    margin: 10px;
+    background-color: $color-fondo;
+    font-size: 30px;
+  }
+}
+
+.iconos-redes {
+  @include flex-center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: $color-fondo;
+  padding: 20px 0;
+
+  i {
+    color: gray;
+    font-size: 50px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: brown;
+    }
+  }
+}
+
+.contactos-principl {
+  img {
+    height: auto;
+    max-width: 100%;
+    background-color: $color-fondo;
+  }
+}
+
+.footer-contacto {
+  background-color: $color-fondo;
+  padding: 20px 0;
+  margin-top: 0;
+
+  .contenido-footer-contacto {
+    @include flex-center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .redes-footer-contacto {
+    h3 {
+      font-family: $font-principal;
+      color: $color-index;
+      font-size: 15px;
+    }
+  }
+
+  .mapa-contacto {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 130px;
+    height: 130px;
+    background-color: transparent;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}
+
+// FOOTER GENERAL
+.footer-contacto {
+  background-color: $color-fondo;
+  padding: 20px 0;
+  margin-top: 0;
+
   .redes {
     text-align: center;
     font-size: 18px;
     font-weight: 300;
   }
 
-  .redes-sociales {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px 0;
-  }
-
+  .redes-sociales,
   .iconos-redes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     flex-direction: column;
+    margin: 30px 0;
     padding: 10px;
   }
 
@@ -479,7 +423,44 @@ header {
   }
 }
 
-/* Imagen fija */
+// MARCAS PAGE
+.fondo-titulo-marcas {
+  background-color: $color-fondo;
+  padding: 10px 0;
+  text-align: center;
+
+  h1 {
+    @extend %titulo;
+    color: $color-titulo;
+    font-size: 25px;
+    margin: 0;
+  }
+}
+
+.grid-galeria-marcas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: 5px;
+  padding: 2px;
+  background-color: rgba(128, 128, 128, 0.15);
+
+  .grid-item-marcas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: $color-fondo;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+// FIXED IMAGE
 .fixed {
   img {
     width: 60px;
@@ -488,4 +469,3 @@ header {
     right: 20px;
   }
 }
-

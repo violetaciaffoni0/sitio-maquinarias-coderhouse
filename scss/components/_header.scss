@@ -1,15 +1,11 @@
-@use "components/variables";
-@use "base/funcionalidades";
-@use "base/generales";
-@use "base/querys";
-@use "components/contacto";
-@use "components/footer";
-@use "components/header";
-@use "components/index-pagina-principal";
-@use "components/marcas";
-@use "components/mixins";
-@use "components/productos";
-@use "components/sobre-nosotros";
+@use "./variables";
+@use "./mixins";
+ @use "./extensiones";
+
+@use "../base/funcionalidades";
+@use "../base/generales";
+@use "../base/querys";
+
 
 // _variables.scss
 $color-principal: rgb(17, 17, 118);

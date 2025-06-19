@@ -1,69 +1,13 @@
+@use "./variables";
+@use "./mixins";
+ @use "./extensiones";
+@use "../base/funcionalidades";
+@use "../base/generales";
+@use "../base/querys";
 
-@use "components/variables";
-@use "base/funcionalidades";
-@use "base/generales";
-@use "base/querys";
-@use "components/contacto";
-@use "components/footer";
-@use "components/header";
-@use "components/index-pagina-principal";
-@use "components/marcas";
-@use "components/mixins";
-@use "components/productos";
-@use "components/sobre-nosotros";
-
-
-// _variables.scss
-$color-principal: rgb(17, 17, 118);
-$color-secundario: rgb(22, 22, 99);
-$color-titulo: rgba(33, 20, 106, 0.931);
-$color-fondo: white;
-$color-hover-boton: rgba(128, 128, 128, 0.489);
-$color-boton: rgba(128, 128, 128, 0.441);
-$color-texto: #0a1a57;
-$color-parrafo: #333;
-
-$font-principal: 'Raleway', sans-serif;
-$font-secundaria: 'Open Sans', sans-serif;
-
-// _mixins.scss
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-// _extensiones.scss
-%parrafo-grande {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $color-fondo;
-  padding: 10px 20px;
-  margin: 20px auto;
-  border-radius: 10px;
-  font-size: 25px;
-  font-weight: 400;
-  font-family: $font-principal;
-  text-align: center;
-  max-width: 1200px;
-}
-
-// producto.scss
-/*@use 'variables';
-@use 'mixins';
-@use 'extensiones';
-@use 'header';
-@use'carousel';
-@use 'logo';
-@use'productos';
-@use 'footer';
-@use 'fixed';*/
-
-
-//_Header.scss
+// Header
 header {
-  background-color: $color-fondo;
+  background-color: variables.$color-fondo;
   height: 12vh;
 
   .navbar-brand {
@@ -75,41 +19,41 @@ header {
   }
 
   .nav-link {
-    color: $color-principal !important;
+    color: variables.$color-principal !important;
   }
 
   .boton {
-    border: 2px solid $color-fondo;
+    border: 2px solid variables.$color-fondo;
     border-radius: 2px;
-    color: $color-secundario;
-    background-color: $color-boton;
+    color: variables.$color-secundario;
+    background-color: variables.$color-boton;
 
     &:hover {
-      background-color: $color-hover-boton;
+      background-color: variables.$color-hover-boton;
     }
   }
 }
 
-/* Carrusel */
+// Carrusel
 .carousel-inner {
   div {
     img {
       width: 70%;
       height: 500px;
       padding: 20px;
-      background-color: $color-fondo;
+      background-color: variables.$color-fondo;
     }
   }
 }
 
-/* Imagen del logo (fuera del navbar) */
+// Logo imagen (fuera del navbar)
 .logoo {
   height: 120px;
 }
 
-/* Main productos */
+// Main productos
 .productos-pagina-productos {
-  background-color: $color-fondo;
+  background-color: variables.$color-fondo;
   padding-bottom: 60px;
   width: 100%;
   text-align: center;
@@ -118,10 +62,10 @@ header {
     display: flex;
     width: 100%;
     text-align: center;
-    font-family: $font-principal;
+    font-family: variables.$font-principal;
     font-size: 25px;
     font-weight: 250;
-    color: $color-titulo;
+    color: variables.$color-titulo;
     margin: 20px 0;
   }
 }
@@ -131,14 +75,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $color-texto;
+  color: variables.$color-texto;
   background-color: white;
   padding: 10px 20px;
   margin: 20px auto;
   border-radius: 10px;
   font-size: 25px;
   font-weight: 400;
-  font-family: 'Raleway', sans-serif;
+  font-family: variables.$font-principal;
   text-align: center;
   max-width: 1200px;
 }
@@ -150,7 +94,7 @@ header {
   gap: 20px;
 
   .tarjeta-producto {
-    background-color: $color-fondo;
+    background-color: variables.$color-fondo;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     width: 240px;
@@ -175,13 +119,13 @@ header {
       font-size: 16px;
       color: #333;
       padding: 15px;
-      font-family: $font-secundaria;
+      font-family: variables.$font-secundaria;
       margin: 0;
     }
   }
 }
 
-/* Footer */
+// Footer producto
 .producto-footer {
   .redes {
     text-align: center;
@@ -190,13 +134,13 @@ header {
   }
 
   .redes-sociales {
-    @include flex-center;
+    @include mixins.flex-center;
     flex-direction: column;
     margin: 30px 0;
   }
 
   .iconos-redes {
-    @include flex-center;
+    @include mixins.flex-center;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
@@ -209,7 +153,7 @@ header {
   }
 }
 
-/* Imagen fija */
+// Imagen fija
 .fixed {
   img {
     width: 60px;
