@@ -1,10 +1,10 @@
 /* Error: Can't find stylesheet to import.
  *    ,
- * 42 | @import 'mixins';
- *    |         ^^^^^^^^
+ * 43 | @import 'extensiones';
+ *    |         ^^^^^^^^^^^^^
  *    '
- *   scss/components/_index-pagina-principal.scss 42:9  @use
- *   scss/estilos.scss 7:1                              root stylesheet */
+ *   scss/components/_contacto.scss 43:9  @use
+ *   scss/estilos.scss 6:1                root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 42 \2502  @import 'mixins';\a    \2502          ^^^^^^^^\a    \2575 \a   scss/components/_index-pagina-principal.scss 42:9  @use\a   scss/estilos.scss 7:1                              root stylesheet";
+  content: "Error: Can't find stylesheet to import.\a    \2577 \a 43 \2502  @import 'extensiones';\a    \2502          ^^^^^^^^^^^^^\a    \2575 \a   scss/components/_contacto.scss 43:9  @use\a   scss/estilos.scss 6:1                root stylesheet";
 }
