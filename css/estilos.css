@@ -1,10 +1,10 @@
 /* Error: @use rules must be written before any other rules.
  *    ,
- * 54 | @use 'variables';
+ * 53 | @use 'variables';
  *    | ^^^^^^^^^^^^^^^^
  *    '
- *   scss/components/_contacto.scss 54:1  @use
- *   scss/estilos.scss 6:1                root stylesheet */
+ *   scss/components/_variables.scss 53:1  @use
+ *   scss/main.scss 1:1                    root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: @use rules must be written before any other rules.\a    \2577 \a 54 \2502  @use 'variables';\a    \2502  ^^^^^^^^^^^^^^^^\a    \2575 \a   scss/components/_contacto.scss 54:1  @use\a   scss/estilos.scss 6:1                root stylesheet";
+  content: "Error: @use rules must be written before any other rules.\a    \2577 \a 53 \2502  @use 'variables';\a    \2502  ^^^^^^^^^^^^^^^^\a    \2575 \a   scss/components/_variables.scss 53:1  @use\a   scss/main.scss 1:1                    root stylesheet";
 }
