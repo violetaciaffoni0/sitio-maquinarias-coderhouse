@@ -1,16 +1,8 @@
-  @use "../variables" as variables;
-  @use "../mixins" as mixins;
-  @use "../extensiones"; // Asegurate de que este archivo use @forward si vas a usar @use
-  @use "../base/funcionalidades";
-  @use "../base/generales";
-  @use "../base/querys";
-
-
 
   // _contacto.scss
 
   .titulo-contacto {
-      background-color: variables.$color-fondo;
+      background-color: funcionalidades.$color-fondo;
       padding: 20px 0;
       text-align: center;
 
@@ -20,7 +12,7 @@
           color: variables.$color-titulo;
           padding: 5px;
           margin: 10px;
-          background-color: variables.$color-fondo;
+          background-color: funcionalidades.$color-fondo;
           font-size: 30px;
       }
   }

@@ -1,11 +1,12 @@
+@use "base/funcionalidades" as *;
+@use "base/generales";
+@use "base/querys";
+
 
 @use "components/variables";
 @use "components/mixins";
 @use "components/extensiones";
 
-@use "base/funcionalidades";
-@use "base/generales";
-@use "base/querys";
 
 // Aquí importás los componentes completos
 @use "components/contacto";

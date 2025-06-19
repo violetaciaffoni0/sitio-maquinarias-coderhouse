@@ -1,10 +1,10 @@
-/* Error: @use rules must be written before any other rules.
+/* Error: Undefined variable.
  *   ,
- * 5 |   @use "../base/funcionalidades";
- *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ * 5 |      font-family: $font-principal;
+ *   |                   ^^^^^^^^^^^^^^^
  *   '
- *   scss/components/_contacto.scss 5:3  @use
- *   scss/main.scss 10:1                 root stylesheet */
+ *   scss/components/_extensiones.scss 5:19  @use
+ *   scss/main.scss 8:1                      root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: @use rules must be written before any other rules.\a   \2577 \a 5 \2502    @use "../base/funcionalidades";\a   \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss/components/_contacto.scss 5:3  @use\a   scss/main.scss 10:1                 root stylesheet';
+  content: "Error: Undefined variable.\a   \2577 \a 5 \2502       font-family: $font-principal;\a   \2502                    ^^^^^^^^^^^^^^^\a   \2575 \a   scss/components/_extensiones.scss 5:19  @use\a   scss/main.scss 8:1                      root stylesheet";
 }
