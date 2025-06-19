@@ -1,14 +1,14 @@
-@import "variables";
-@import "base/funcionalidades";
-@import "base/generales";
-@import "base/querys";
-@import "components/footer";
-@import "components/header";
-@import "components/index-pagina-principal";
-@import "components/productos";
-@import "components/sobre-nosotros";
-@import "components/contacto.scss";
-@import "components/marcas.scss";
+@use "components/variables";
+@use "base/funcionalidades";
+@use "base/generales";
+@use "base/querys";
+@use "components/footer";
+@use "components/header";
+@use "components/index-pagina-principal";
+@use "components/productos";
+@use "components/sobre-nosotros";
+@use "components/contacto";
+@use "components/marcas";
 
 // _variables.scss
 $color-principal: rgb(17, 17, 118);

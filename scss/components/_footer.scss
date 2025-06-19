@@ -1,26 +1,28 @@
-// _footer.scss
+@use "../components/variables" as variables;
+@use "../base/funcionalidades" as *;
+
 .footer-contacto {
-    background-color: $color-fondo;
-    padding: 20px 0;
-    margin-top: 0;
+  background-color: variables.$color-fondo;
+  padding: 20px 0;
+  margin-top: 0;
 
-    .redes {
-        text-align: center;
-        font-size: 18px;
-        font-weight: 300;
-    }
+  .redes {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+  }
 
-    .redes-sociales,
-    .iconos-redes {
-        @include flex-center;
-        flex-direction: column;
-        margin: 30px 0;
-        padding: 10px;
-    }
+  .redes-sociales,
+  .iconos-redes {
+    @include flex-center;
+    flex-direction: column;
+    margin: 30px 0;
+    padding: 10px;
+  }
 
-    img {
-        width: 70px;
-        height: auto;
-        margin-bottom: 10px;
-    }
+  img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 10px;
+  }
 }
