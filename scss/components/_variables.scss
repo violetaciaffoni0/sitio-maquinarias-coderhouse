@@ -10,3 +10,37 @@ $color-parrafo: #333;
 
 $font-principal: 'Raleway', sans-serif;
 $font-secundaria: 'Open Sans', sans-serif;
+
+// _mixins.scss
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// _extensiones.scss
+%parrafo-grande {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-fondo;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: $font-principal;
+    text-align: center;
+    max-width: 1200px;
+}
+
+// producto.scss
+@use 'variables';
+@use 'mixins';
+@use 'extensiones';
+@use 'header';
+@use 'carousel';
+@use 'logo';
+@use 'productos';
+@use 'footer';
+@use 'fixed';

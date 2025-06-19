@@ -1,0 +1,83 @@
+@use "components/variables";
+@use "base/funcionalidades";
+@use "base/generales";
+@use "base/querys";
+@use "components/contacto";
+@use "components/footer";
+@use "components/header";
+@use "components/index-pagina-principal";
+@use "components/marcas";
+@use "components/mixins";
+@use "components/productos";
+@use "components/sobre-nosotros";
+
+
+
+
+// _variables.scss
+$color-principal: rgb(17, 17, 118);
+$color-secundario: rgb(22, 22, 99);
+$color-titulo: rgb(33, 20, 106);
+$color-fondo: white;
+$color-hover-boton: rgba(128, 128, 128, 0.489);
+$color-boton: rgba(128, 128, 128, 0.441);
+$color-boton-claro: rgba(128, 128, 128, 0.673);
+$color-hover-boton-contacto: rgb(19, 19, 136);
+$color-texto: #333;
+
+$font-principal: 'Raleway', sans-serif;
+$font-secundaria: 'Open Sans', sans-serif;
+
+
+
+// _mixins.scss
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin boton($bg-color, $text-color) {
+  display: inline-block;
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 15px 35px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: $font-principal;
+  transition: background-color 0.3s ease;
+}
+
+// _extensiones.scss
+%titulo {
+  font-family: $font-principal;
+  font-size: 30px;
+  font-weight: 250;
+  color: $color-titulo;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+}
+
+%parrafo {
+  font-family: $font-principal;
+  font-size: 18px;
+  line-height: 1.6;
+  color: $color-texto;
+  background-color: transparent;
+  padding: 10px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+// producto.scss
+@use 'variables';
+@use 'mixins';
+@use 'extensiones';
+@use 'header';
+@use'carousel';
+@use 'logo';
+@use'productos';
+@use 'footer';
+@use 'fixed';

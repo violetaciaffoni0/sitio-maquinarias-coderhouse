@@ -1,3 +1,20 @@
+
+@use "components/variables";
+@use "base/funcionalidades";
+@use "base/generales";
+@use "base/querys";
+@use "components/contacto";
+@use "components/footer";
+@use "components/header";
+@use "components/index-pagina-principal";
+@use "components/marcas";
+@use "components/mixins";
+@use "components/productos";
+@use "components/sobre-nosotros";
+
+
+
+
 // _variables.scss
 $color-principal: rgb(17, 17, 118);
 $color-secundario: rgb(22, 22, 99);
@@ -53,14 +70,16 @@ $font-secundaria: 'Open Sans', sans-serif;
   margin: 0 auto;
   text-align: center;
 }
-
-// sobre-nosotros.scss
-@import 'variables';
-@import 'mixins';
-@import 'extensiones';
-@import 'header';
-@import 'footer';
-@import 'sobre-nosotros';
+// producto.scss
+@use 'variables';
+@use 'mixins';
+@use 'extensiones';
+@use 'header';
+@use'carousel';
+@use 'logo';
+@use'productos';
+@use 'footer';
+@use 'fixed';
 
 // _header.scss
 header {
