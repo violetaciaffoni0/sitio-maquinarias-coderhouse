@@ -1,0 +1,131 @@
+// _variables.scss
+$color-principal: rgb(17, 17, 118);
+$color-secundario: rgb(22, 22, 99);
+$color-fondo: white;
+$color-boton-hover: rgba(128, 128, 128, 0.489);
+$color-boton: rgba(128, 128, 128, 0.441);
+$color-titulo: rgba(12, 12, 114, 0.768);
+$color-index: white;
+$font-principal: 'Raleway', sans-serif;
+$font-secundaria: 'Open Sans', sans-serif;
+$tipos-producto: 'eco', 'premium', 'clasico';
+
+
+// _mixins.scss
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin boton($bg-color, $text-color) {
+    display: inline-block;
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+// _extensiones.scss
+%titulo {
+    font-family: $font-principal;
+    font-weight: 200;
+    text-align: center;
+}
+
+// main.scss
+@import 'variables';
+@import 'mixins';
+@import 'extensiones';
+@import 'header';
+@import 'main';
+@import 'productos';
+@import 'footer';
+@import 'fixed';
+
+
+
+// _contacto.scss
+
+.titulo-contacto {
+    background-color: $color-fondo;
+    padding: 20px 0;
+    text-align: center;
+
+    h1 {
+        @extend %titulo;
+        @include flex-center;
+        color: $color-titulo;
+        padding: 5px;
+        margin: 10px;
+        background-color: $color-fondo;
+        font-size: 30px;
+    }
+}
+
+.iconos-redes {
+    @include flex-center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: $color-fondo;
+    padding: 20px 0;
+
+    i {
+        color: gray;
+        font-size: 50px;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: brown;
+        }
+    }
+}
+
+.contactos-principl {
+    img {
+        height: auto;
+        max-width: 100%;
+        background-color: $color-fondo;
+    }
+}
+
+.footer-contacto {
+    background-color: $color-fondo;
+    padding: 20px 0;
+    margin-top: 0;
+
+    .contenido-footer-contacto {
+        @include flex-center;
+        max-width: 800px;
+        margin: 0 auto;
+        gap: 30px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .redes-footer-contacto {
+        h3 {
+            font-family: $font-principal;
+            color: $color-index;
+            font-size: 15px;
+        }
+    }
+
+    .mapa-contacto {
+        border-radius: 8px;
+        overflow: hidden;
+        width: 130px;
+        height: 130px;
+        background-color: transparent;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+}

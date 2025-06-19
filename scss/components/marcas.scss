@@ -1,0 +1,120 @@
+// _variables.scss
+$color-principal: rgb(17, 17, 118);
+$color-secundario: rgb(22, 22, 99);
+$color-fondo: white;
+$color-boton-hover: rgba(128, 128, 128, 0.489);
+$color-boton: rgba(128, 128, 128, 0.441);
+$color-titulo: rgba(12, 12, 114, 0.768);
+$color-index: white;
+$font-principal: 'Raleway', sans-serif;
+$font-secundaria: 'Open Sans', sans-serif;
+$tipos-producto: 'eco', 'premium', 'clasico';
+
+
+// _mixins.scss
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin boton($bg-color, $text-color) {
+    display: inline-block;
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+// _extensiones.scss
+%titulo {
+    font-family: $font-principal;
+    font-weight: 200;
+    text-align: center;
+}
+
+// main.scss
+@import 'variables';
+@import 'mixins';
+@import 'extensiones';
+@import 'header';
+@import 'main';
+@import 'productos';
+@import 'footer';
+@import 'fixed';
+
+
+// _marcas.scss
+.fondo-titulo-marcas {
+    background-color: $color-fondo;
+    padding: 10px 0;
+    text-align: center;
+
+    h1 {
+        @extend %titulo;
+        color: $color-titulo;
+        font-size: 25px;
+        margin: 0;
+    }
+}
+
+.grid-galeria-marcas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 5px;
+    padding: 2px;
+    background-color: rgba(128, 128, 128, 0.15);
+
+    .grid-item-marcas {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background-color: white;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.footer-contacto {
+    @extend .footer-contacto;
+
+    p {
+        font-family: $font-secundaria;
+        font-size: 14px;
+        color: $color-principal;
+        margin: 0;
+        text-align: center;
+    }
+
+    .redes-sociales {
+        @include flex-center;
+        flex-direction: column;
+        margin: 30px 0;
+        padding: 10px;
+
+        .iconos-redes {
+            display: flex;
+            gap: 10px;
+
+            a {
+                color: $color-principal;
+                font-size: 20px;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: darken($color-principal, 15%);
+                }
+            }
+        }
+    }
+}
