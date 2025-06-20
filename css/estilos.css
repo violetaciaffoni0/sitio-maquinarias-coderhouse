@@ -1,22 +1,397 @@
-/* Error: Module loop: this module is already being loaded.
- *   ,--> scss/base/_funcionalidades.scss
- * 2 |  @use "../base/funcionalidades" as funcionalidades;
- *   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ new load
- *   '
- *   ,--> scss/main.scss
- * 3 | @use "base/funcionalidades";
- *   | =========================== original load
- *   '
- *   scss/base/_funcionalidades.scss 2:2  @use
- *   scss/main.scss 3:1                   root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Module loop: this module is already being loaded.\a   \250c \2500 \2500 > scss/base/_funcionalidades.scss\a 2 \2502   @use "../base/funcionalidades" as funcionalidades;\a   \2502   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > scss/main.scss\a 3 \2502  @use "base/funcionalidades";\a   \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   scss/base/_funcionalidades.scss 2:2  @use\a   scss/main.scss 3:1                   root stylesheet';
+body {
+  background-color: white;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #0a1a57;
 }
+
+header {
+  background-color: white;
+  height: 12vh;
+}
+header .navbar-brand img {
+  height: 70px;
+  width: 200px;
+  margin: 10px;
+}
+header .nav-link {
+  color: rgb(17, 17, 118) !important;
+}
+header .boton {
+  border: 2px solid white;
+  border-radius: 2px;
+  color: rgb(22, 22, 99);
+  background-color: rgba(128, 128, 128, 0.441);
+}
+header .boton:hover {
+  background-color: rgba(128, 128, 128, 0.489);
+}
+
+.carousel-inner div img {
+  width: 70%;
+  height: 500px;
+  padding: 20px;
+  background-color: white;
+}
+
+.logoo {
+  height: 120px;
+}
+
+.main-principal .titulo-principal-main {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(12, 12, 114, 0.768);
+  padding: 5px;
+  margin: 10px;
+  font-size: 30px;
+}
+.main-principal .fondo-titulo-inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.main-principal .principal-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(50, 50, 150);
+  height: 100vh;
+  justify-content: flex-start;
+  padding-left: 60px;
+  background: url("../img/index foto 1.jpeg") no-repeat center/cover fixed;
+}
+.main-principal .principal-index .contenido-principal-index h1 {
+  color: rgb(50, 50, 150);
+  font-size: 70px;
+  max-width: 700px;
+}
+.main-principal .principal-index .contenido-principal-index .boton-principal-index {
+  display: inline-block;
+  background-color: rgba(128, 128, 128, 0.543);
+  color: black;
+  padding: 15px 35px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.productos-inicio .producto-destacado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background-color: white;
+}
+.productos-inicio .tarjeta-producto {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  flex-wrap: wrap;
+}
+.productos-inicio .tarjeta-producto:hover {
+  transform: scale(1.05);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+p {
+  font-weight: 300;
+}
+
+.productos-pagina-productos {
+  background-color: white;
+  padding-bottom: 60px;
+  width: 100%;
+  text-align: center;
+}
+.productos-pagina-productos h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 250;
+  color: rgba(33, 20, 106, 0.931);
+  margin: 20px 0;
+}
+
+.parrafo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0a1a57;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  max-width: 1200px;
+}
+
+.producto-destacado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.producto-destacado .tarjeta-producto {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 240px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  overflow: hidden;
+}
+.producto-destacado .tarjeta-producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+.producto-destacado .tarjeta-producto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+.producto-destacado .tarjeta-producto p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  padding: 15px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+.fondo-titulo-sobre-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.titulo-sobre-nosotros {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 250;
+  color: rgba(33, 20, 106, 0.931);
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+}
+
+.titulo-principal-nosotros {
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  color: rgba(33, 20, 106, 0.931);
+  background-color: white;
+  padding: 10px 15px;
+  margin: 5px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contenido-sobre-nosotros p {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #0a1a57;
+  background-color: transparent;
+  padding: 10px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.foto-negocio-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0;
+  margin: 0;
+  background-color: transparent;
+}
+.foto-negocio-nosotros img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.boton-centro .boton-contacto {
+  display: inline-block;
+  background-color: rgba(200, 200, 200, 0.7);
+  color: white;
+  padding: 15px 35px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.boton-centro .boton-contacto:hover {
+  background-color: rgba(180, 180, 180, 0.6);
+}
+
+.titulo-contacto {
+  background-color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.titulo-contacto h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(33, 20, 106, 0.931);
+  padding: 5px;
+  margin: 10px;
+  background-color: white;
+  font-size: 30px;
+}
+
+.iconos-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 20px 0;
+}
+.iconos-redes i {
+  color: gray;
+  font-size: 50px;
+  transition: color 0.3s ease;
+}
+.iconos-redes i:hover {
+  color: brown;
+}
+
+.contactos-principl img {
+  height: auto;
+  max-width: 100%;
+  background-color: white;
+}
+
+.footer-contacto {
+  background-color: white;
+  padding: 20px 0;
+  margin-top: 0;
+}
+.footer-contacto .contenido-footer-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.footer-contacto .redes-footer-contacto h3 {
+  font-family: "Raleway", sans-serif;
+  color: rgb(50, 50, 150);
+  font-size: 15px;
+}
+.footer-contacto .mapa-contacto {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 130px;
+  height: 130px;
+  background-color: transparent;
+}
+.footer-contacto .mapa-contacto iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.footer-contacto .redes {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+.footer-contacto .redes-sociales,
+.footer-contacto .iconos-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 0;
+  padding: 10px;
+}
+.footer-contacto img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.fondo-titulo-marcas {
+  background-color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+.fondo-titulo-marcas h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  color: rgba(33, 20, 106, 0.931);
+  font-size: 25px;
+  margin: 0;
+}
+
+.grid-galeria-marcas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: 5px;
+  padding: 2px;
+  background-color: rgba(128, 128, 128, 0.15);
+}
+.grid-galeria-marcas .grid-item-marcas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+}
+.grid-galeria-marcas .grid-item-marcas img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.fixed img {
+  width: 60px;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+}
+
+/*# sourceMappingURL=estilos.css.map */
