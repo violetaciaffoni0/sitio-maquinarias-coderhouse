@@ -1,24 +1,24 @@
-@use "./variables";
-@use "./mixins";
+ @use "./variables" as vars;
+ @use "./mixins" as mix;
  @use "./extensiones";
+ @use "../base/funcionalidades";
+ @use "../base/generales";
+ @use "../base/querys";
 
-@use "../base/funcionalidades";
-@use "../base/generales";
-@use "../base/querys";
 
 // _marcas.scss
 
 .fondo-titulo-marcas {
-    background-color: variables.$color-fondo;
+    background-color: vars.$color-fondo;
     padding: 10px 0;
     text-align: center;
 
     h1 {
         @extend %titulo;
-        color: variables.$color-titulo;
+        color: vars.$color-titulo;
         font-size: 25px;
         margin: 0;
-        font-family: variables.$font-principal;
+        font-family: vars.$font-principal;
     }
 }
 
@@ -46,20 +46,20 @@
 }
 
 .footer-contacto {
-    background-color: variables.$color-fondo;
+    background-color: vars.$color-fondo;
     padding: 20px 0;
     margin-top: 0;
 
     p {
-        font-family: variables.$font-secundaria;
+        font-family: vars.$font-secundaria;
         font-size: 14px;
-        color: variables.$color-principal;
+        color: vars.$color-principal;
         margin: 0;
         text-align: center;
     }
 
     .redes-sociales {
-        @include mixins.flex-center;
+        @include mix.flex-center;
         flex-direction: column;
         margin: 30px 0;
         padding: 10px;
@@ -69,12 +69,12 @@
             gap: 10px;
 
             a {
-                color: variables.$color-principal;
+                color: vars.$color-principal;
                 font-size: 20px;
                 transition: color 0.3s;
 
                 &:hover {
-                    color: darken(variables.$color-principal, 15%);
+                    color: darken(vars.$color-principal, 15%);
                 }
             }
         }

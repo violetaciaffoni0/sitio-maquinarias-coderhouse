@@ -1,6 +1,4 @@
-
-@use "./variables";
-
+ @use "./variables" as vars;
 
 @mixin flex-center {
   display: flex;
@@ -16,7 +14,7 @@
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  font-family: variables.$font-principal; // <-- Usamos el prefijo "variables."
+  font-family: vars.$font-principal;
   transition: background-color 0.3s ease;
 }
 

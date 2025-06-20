@@ -1,13 +1,12 @@
- @use "./variables" as variables;
- @use "./mixins" as mixins;
-  @use "./extensiones";
-
+ @use "./variables" as vars;
+ @use "./mixins" as mix;
+ @use "./extensiones";
  @use "../base/funcionalidades";
  @use "../base/generales";
  @use "../base/querys";
 
  .footer-contacto {
-     background-color: variables.$color-fondo;
+     background-color: vars.$color-fondo;
      padding: 20px 0;
      margin-top: 0;
 
@@ -17,12 +16,16 @@
          font-weight: 300;
      }
 
-     .redes-sociales,
-     .iconos-redes {
-         @include mixins.flex-center;
+     .redes-sociales {
+         @include mix.flex-center;
          flex-direction: column;
          margin: 30px 0;
          padding: 10px;
+
+         .iconos-redes {
+             display: flex;
+             gap: 10px;
+         }
      }
 
      img {

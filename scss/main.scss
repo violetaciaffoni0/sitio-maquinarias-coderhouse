@@ -1,15 +1,13 @@
-@use "base/funcionalidades" as *;
+// scss/main.scss
+
+@use "base/funcionalidades";
 @use "base/generales";
 @use "base/querys";
-
 
 @use "components/variables";
 @use "components/mixins";
 @use "components/extensiones";
-
-
-// Aquí importás los componentes completos
-@use "components/contacto";
+@use "components/contacto"; // Acá se importa tu _contacto.scss
 @use "components/footer";
 @use "components/header";
 @use "components/index-pagina-principal";

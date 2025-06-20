@@ -1,8 +1,9 @@
- 
- 
+ @use "../variables" as vars;
+ @use "../mixins" as mix;
+
  // EXTENSIONS
  %titulo {
-     font-family: $font-principal;
+     font-family: vars.$font-principal;
      font-weight: 200;
      text-align: center;
  }

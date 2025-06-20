@@ -1,104 +1,48 @@
-@use "./variables";
-@use "./mixins";
+ @use "./variables" as vars;
+ @use "./mixins" as mix;
  @use "./extensiones";
+ @use "../base/funcionalidades";
+ @use "../base/generales";
+ @use "../base/querys";
 
-@use "../base/funcionalidades";
-@use "../base/generales";
-@use "../base/querys";
+ header {
+     background-color: vars.$color-fondo;
+     height: 12vh;
 
+     .navbar-brand {
+         img {
+             height: 70px;
+             width: 200px;
+             margin: 10px;
+         }
+     }
 
-// _variables.scss
-$color-principal: rgb(17, 17, 118);
-$color-secundario: rgb(22, 22, 99);
-$color-fondo: white;
-$color-boton-hover: rgba(128, 128, 128, 0.489);
-$color-boton: rgba(128, 128, 128, 0.441);
-$color-titulo: rgba(12, 12, 114, 0.768);
-$color-index: white;
-$font-principal: 'Raleway', sans-serif;
-$font-secundaria: 'Open Sans', sans-serif;
-$tipos-producto: 'eco', 'premium', 'clasico';
+     .nav-link {
+         color: vars.$color-principal !important;
+     }
 
+     .boton {
+         @include mix.boton(vars.$color-boton, vars.$color-principal);
+         border: 2px solid vars.$color-fondo;
+         border-radius: 2px;
 
-// _mixins.scss
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+         &:hover {
+             background-color: vars.$color-boton-hover;
+         }
+     }
+ }
 
-@mixin boton($bg-color, $text-color) {
-    display: inline-block;
-    background-color: $bg-color;
-    color: $text-color;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
+ /* Para el carousel */
 
-// _extensiones.scss
-%titulo {
-    font-family: $font-principal;
-    font-weight: 200;
-    text-align: center;
-}
+ .carousel-inner div img {
+     width: 70%;
+     height: 500px;
+     padding: 20px;
+     background-color: vars.$color-fondo;
+ }
 
-// main.scss
-/*@use 'variables';
-@use'mixins';
-@use 'extensiones';
-@use 'header';
-@use 'main';
-@use 'productos';
-@use 'footer';
-@use 'fixed';*/
+ /* Logo */
 
-
-
-
-/*_header.scss*/
-
-header {
-    background-color: white;
-    height: 12vh;
-
-    .navbar-brand {
-        img {
-            height: 70px;
-            width: 200px;
-            margin: 10px;
-        }
-    }
-
-    .nav-link {
-        color: rgb(17, 17, 118) !important;
-    }
-
-    .boton {
-    border: 2px solid white;
-    border-radius: 2px;
-    color: rgb(22, 22, 99);
-    background-color: rgba(128, 128, 128, 0.441);
-
-    &:hover {
-        background-color: rgba(128, 128, 128, 0.489);
-    }
-}
-
-}
-
-.carousel-inner 
-div
- img {
-    width: 70%;
-    height: 500px;
-    padding: 20px;
-    background-color: white;
-}
-
-.logoo {
-    height: 120px;
-}
+ .logoo {
+     height: 120px;
+ }

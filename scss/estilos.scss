@@ -1,101 +1,58 @@
-// VARIABLES
-$color-principal: rgb(17, 17, 118);
-$color-secundario: rgb(22, 22, 99);
-$color-titulo: rgb(33, 20, 106);
-$color-fondo: white;
-$color-hover-boton: rgba(128, 128, 128, 0.489);
-$color-boton: rgba(128, 128, 128, 0.441);
-$color-boton-claro: rgba(128, 128, 128, 0.673);
-$color-hover-boton-contacto: rgb(19, 19, 136);
-$color-texto: #333;
-$color-index: white;
+// === SCSS COMPLETO CORREGIDO CON @use ===
+// Archivo principal: estilos.scss
 
-$font-principal: 'Raleway', sans-serif;
-$font-secundaria: 'Open Sans', sans-serif;
+@use "variables" as vars;
+@use "mixins" as mix;
+@use "extensiones";
 
-$tipos-producto: 'eco', 'premium', 'clasico';
-
-// MIXINS
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin boton($bg-color, $text-color) {
-  display: inline-block;
-  background-color: $bg-color;
-  color: $text-color;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-// EXTENSIONS
-%titulo {
-  font-family: $font-principal;
-  font-weight: 200;
-  text-align: center;
-}
-
-// GLOBAL BODY
 body {
-  background-color: $color-fondo;
+  background-color: vars.$color-fondo;
   margin: 0;
-  font-family: $font-secundaria;
-  color: $color-texto;
+  font-family: vars.$font-secundaria;
+  color: vars.$color-texto;
 }
 
-// HEADER
 header {
-  background-color: $color-fondo;
+  background-color: vars.$color-fondo;
   height: 12vh;
 
-  .navbar-brand {
-    img {
-      height: 70px;
-      width: 200px;
-      margin: 10px;
-    }
+  .navbar-brand img {
+    height: 70px;
+    width: 200px;
+    margin: 10px;
   }
 
   .nav-link {
-    color: $color-principal !important;
+    color: vars.$color-principal !important;
   }
 
   .boton {
-    border: 2px solid $color-fondo;
+    border: 2px solid vars.$color-fondo;
     border-radius: 2px;
-    color: $color-secundario;
-    background-color: $color-boton;
+    color: vars.$color-secundario;
+    background-color: vars.$color-boton;
 
     &:hover {
-      background-color: $color-hover-boton;
+      background-color: vars.$color-hover-boton;
     }
   }
 }
 
-// CAROUSEL
 .carousel-inner div img {
   width: 70%;
   height: 500px;
   padding: 20px;
-  background-color: $color-fondo;
+  background-color: vars.$color-fondo;
 }
 
-// LOGO IMAGE
 .logoo {
   height: 120px;
 }
 
-// MAIN - INDEX PAGE
 .main-principal {
   .titulo-principal-main {
-    @extend %titulo;
-    @include flex-center;
+    @extend %extensiones.titulo;
+    @include mix.flex-center;
     color: rgba(12, 12, 114, 0.768);
     padding: 5px;
     margin: 10px;
@@ -103,17 +60,14 @@ header {
   }
 
   .fondo-titulo-inicio {
-    @include flex-center;
-    color: rgba(20, 11, 98, 0.077);
-    padding: 0;
-    margin: 0;
-    background-color: $color-fondo;
+    @include mix.flex-center;
+    background-color: vars.$color-fondo;
   }
 
   .principal-index {
-    @include flex-center;
+    @include mix.flex-center;
     text-align: center;
-    color: $color-index;
+    color: vars.$color-index;
     height: 100vh;
     justify-content: flex-start;
     padding-left: 60px;
@@ -121,22 +75,19 @@ header {
 
     .contenido-principal-index {
       h1 {
-        color: $color-index;
-        position: relative;
-        z-index: 1;
-        max-width: 700px;
+        color: vars.$color-index;
         font-size: 70px;
+        max-width: 700px;
       }
 
       .boton-principal-index {
-        @include boton(rgba(128, 128, 128, 0.543), black);
+        @include mix.boton(rgba(128, 128, 128, 0.543), black);
         margin-top: 15px;
       }
     }
   }
 }
 
-// PRODUCTOS - MAIN PRODUCTS
 .productos-inicio {
   .producto-destacado {
     display: flex;
@@ -145,7 +96,7 @@ header {
     align-items: center;
     gap: 30px;
     padding: 30px;
-    background-color: $color-fondo;
+    background-color: vars.$color-fondo;
   }
 
   .tarjeta-producto {
@@ -173,18 +124,17 @@ p {
   font-weight: 300;
 }
 
-// PRODUCTOS PAGE - DETAILED
 .productos-pagina-productos {
-  background-color: $color-fondo;
+  background-color: vars.$color-fondo;
   padding-bottom: 60px;
   width: 100%;
   text-align: center;
 
   h2 {
-    @extend %titulo;
+    @extend %extensiones.titulo;
     font-size: 25px;
     font-weight: 250;
-    color: $color-titulo;
+    color: vars.$color-titulo;
     margin: 20px 0;
   }
 }
@@ -194,13 +144,13 @@ p {
   justify-content: center;
   align-items: center;
   color: #0a1a57;
-  background-color: $color-fondo;
+  background-color: vars.$color-fondo;
   padding: 10px 20px;
   margin: 20px auto;
   border-radius: 10px;
   font-size: 25px;
   font-weight: 400;
-  font-family: $font-principal;
+  font-family: vars.$font-principal;
   text-align: center;
   max-width: 1200px;
 }
@@ -212,7 +162,7 @@ p {
   gap: 20px;
 
   .tarjeta-producto {
-    background-color: $color-fondo;
+    background-color: vars.$color-fondo;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     width: 240px;
@@ -237,24 +187,23 @@ p {
       font-size: 16px;
       color: #333;
       padding: 15px;
-      font-family: $font-secundaria;
+      font-family: vars.$font-secundaria;
       margin: 0;
     }
   }
 }
 
-// SOBRE NOSOTROS PAGE
 .fondo-titulo-sobre-nosotros {
-  @include flex-center;
+  @include mix.flex-center;
   padding: 0;
   margin: 0;
 }
 
 .titulo-sobre-nosotros {
-  font-family: $font-principal;
+  font-family: vars.$font-principal;
   font-size: 30px;
   font-weight: 250;
-  color: $color-titulo;
+  color: vars.$color-titulo;
   margin: 0;
   padding: 30px;
   text-align: center;
@@ -263,27 +212,25 @@ p {
 .titulo-principal-nosotros {
   font-size: 10px;
   font-weight: 500;
-  font-family: $font-principal;
-  color: $color-titulo;
-  background-color: $color-fondo;
+  font-family: vars.$font-principal;
+  color: vars.$color-titulo;
+  background-color: vars.$color-fondo;
   padding: 10px 15px;
   margin: 5px auto;
   border-radius: 10px;
   text-align: center;
 }
 
-.contenido-sobre-nosotros {
-  p {
-    font-family: $font-principal;
-    font-size: 18px;
-    line-height: 1.6;
-    color: $color-texto;
-    background-color: transparent;
-    padding: 10px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
+.contenido-sobre-nosotros p {
+  font-family: vars.$font-principal;
+  font-size: 18px;
+  line-height: 1.6;
+  color: vars.$color-texto;
+  background-color: transparent;
+  padding: 10px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .foto-negocio-nosotros {
@@ -302,42 +249,37 @@ p {
   }
 }
 
-.boton-centro {
-  text-align: center;
+.boton-centro .boton-contacto {
+  @include mix.boton(vars.$color-boton-claro, white);
+  margin-top: 30px;
+  margin-bottom: 60px;
 
-  .boton-contacto {
-    @include boton($color-boton-claro, white);
-    margin-top: 30px;
-    margin-bottom: 60px;
-
-    &:hover {
-      background-color: $color-hover-boton-contacto;
-    }
+  &:hover {
+    background-color: vars.$color-hover-boton-contacto;
   }
 }
 
-// CONTACTO PAGE
 .titulo-contacto {
-  background-color: $color-fondo;
+  background-color: vars.$color-fondo;
   padding: 20px 0;
   text-align: center;
 
   h1 {
-    @extend %titulo;
-    @include flex-center;
-    color: $color-titulo;
+    @extend %extensiones.titulo;
+    @include mix.flex-center;
+    color: vars.$color-titulo;
     padding: 5px;
     margin: 10px;
-    background-color: $color-fondo;
+    background-color: vars.$color-fondo;
     font-size: 30px;
   }
 }
 
 .iconos-redes {
-  @include flex-center;
+  @include mix.flex-center;
   flex-direction: column;
   gap: 20px;
-  background-color: $color-fondo;
+  background-color: vars.$color-fondo;
   padding: 20px 0;
 
   i {
@@ -351,21 +293,19 @@ p {
   }
 }
 
-.contactos-principl {
-  img {
-    height: auto;
-    max-width: 100%;
-    background-color: $color-fondo;
-  }
+.contactos-principl img {
+  height: auto;
+  max-width: 100%;
+  background-color: vars.$color-fondo;
 }
 
 .footer-contacto {
-  background-color: $color-fondo;
+  background-color: vars.$color-fondo;
   padding: 20px 0;
   margin-top: 0;
 
   .contenido-footer-contacto {
-    @include flex-center;
+    @include mix.flex-center;
     max-width: 800px;
     margin: 0 auto;
     gap: 30px;
@@ -373,12 +313,10 @@ p {
     text-align: center;
   }
 
-  .redes-footer-contacto {
-    h3 {
-      font-family: $font-principal;
-      color: $color-index;
-      font-size: 15px;
-    }
+  .redes-footer-contacto h3 {
+    font-family: vars.$font-principal;
+    color: vars.$color-index;
+    font-size: 15px;
   }
 
   .mapa-contacto {
@@ -394,13 +332,6 @@ p {
       border: 0;
     }
   }
-}
-
-// FOOTER GENERAL
-.footer-contacto {
-  background-color: $color-fondo;
-  padding: 20px 0;
-  margin-top: 0;
 
   .redes {
     text-align: center;
@@ -410,7 +341,7 @@ p {
 
   .redes-sociales,
   .iconos-redes {
-    @include flex-center;
+    @include mix.flex-center;
     flex-direction: column;
     margin: 30px 0;
     padding: 10px;
@@ -423,15 +354,14 @@ p {
   }
 }
 
-// MARCAS PAGE
 .fondo-titulo-marcas {
-  background-color: $color-fondo;
+  background-color: vars.$color-fondo;
   padding: 10px 0;
   text-align: center;
 
   h1 {
-    @extend %titulo;
-    color: $color-titulo;
+    @extend %extensiones.titulo;
+    color: vars.$color-titulo;
     font-size: 25px;
     margin: 0;
   }
@@ -450,7 +380,7 @@ p {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background-color: $color-fondo;
+    background-color: vars.$color-fondo;
 
     img {
       max-width: 100%;
@@ -460,12 +390,9 @@ p {
   }
 }
 
-// FIXED IMAGE
-.fixed {
-  img {
-    width: 60px;
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-  }
+.fixed img {
+  width: 60px;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
 }

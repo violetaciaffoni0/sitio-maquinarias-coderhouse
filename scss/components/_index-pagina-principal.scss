@@ -1,14 +1,15 @@
- @use "./variables" as variables;
- @use "./mixins" as mixins;
+ @use "./variables" as vars;
+ @use "./mixins" as mix;
  @use "./extensiones"; // Lo importo sin alias para que el placeholder funcione con @extend %titulo;
 
  @use "../base/funcionalidades";
  @use "../base/generales";
  @use "../base/querys";
 
+
  // Header
  header {
-     background-color: variables.$color-fondo;
+     background-color: vars.$color-fondo;
      height: 12vh;
 
      .navbar-brand {
@@ -20,17 +21,17 @@
      }
 
      .nav-link {
-         color: variables.$color-principal !important;
+         color: vars.$color-principal !important;
      }
 
      .boton {
-         border: 2px solid variables.$color-fondo;
+         border: 2px solid vars.$color-fondo;
          border-radius: 2px;
-         color: variables.$color-secundario;
-         background-color: variables.$color-boton;
+         color: vars.$color-secundario;
+         background-color: vars.$color-boton;
 
          &:hover {
-             background-color: variables.$color-boton-hover;
+             background-color: vars.$color-boton-hover;
          }
      }
  }
@@ -39,7 +40,7 @@
      width: 70%;
      height: 500px;
      padding: 20px;
-     background-color: variables.$color-fondo;
+     background-color: vars.$color-fondo;
  }
 
  .logoo {
@@ -51,8 +52,8 @@
  .main-principal {
      .titulo-principal-main {
          @extend %titulo; // Sin prefijo para evitar error
-         @include mixins.flex-center;
-         color: variables.$color-titulo;
+         @include mix.flex-center;
+         color: vars.$color-titulo;
          padding: 5px;
          margin: 10px;
          font-size: 30px;
@@ -60,15 +61,15 @@
  }
 
  .fondo-titulo-inicio {
-     @include mixins.flex-center;
+     @include mix.flex-center;
      color: rgba(20, 11, 98, 0.077);
      padding: 0;
      margin: 0;
-     background-color: variables.$color-fondo;
+     background-color: vars.$color-fondo;
  }
 
  .principal-index {
-     @include mixins.flex-center;
+     @include mix.flex-center;
      text-align: center;
      color: white;
      height: 100vh;
@@ -78,7 +79,7 @@
 
      .contenido-principal-index {
          h1 {
-             color: variables.$color-index;
+             color: vars.$color-index;
              position: relative;
              z-index: 1;
              max-width: 700px;
@@ -86,7 +87,7 @@
          }
 
          .boton-principal-index {
-             @include mixins.boton(rgba(128, 128, 128, 0.543), black);
+             @include mix.boton(rgba(128, 128, 128, 0.543), black);
              margin-top: 15px;
          }
      }
@@ -102,7 +103,7 @@
          align-items: center;
          gap: 30px;
          padding: 30px;
-         background-color: variables.$color-fondo;
+         background-color: vars.$color-fondo;
      }
 
      .tarjeta-producto {
@@ -140,7 +141,7 @@
      }
 
      .redes-sociales {
-         @include mixins.flex-center;
+         @include mix.flex-center;
          display: flex;
          flex-direction: column;
          align-items: center;
@@ -148,7 +149,7 @@
      }
 
      .iconos-redes {
-         @include mixins.flex-center;
+         @include mix.flex-center;
          display: flex;
          justify-content: center;
          align-items: center;
